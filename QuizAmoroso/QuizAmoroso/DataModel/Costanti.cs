@@ -22,8 +22,6 @@ namespace QuizAmoroso.DataModel
 
         public const string domande = 
             "https://amorosoconcorsi.ak12srl.it/services/servizioapp/domande";
-        public const string domandeNew = 
-            "https://amorosoconcorsi.ak12srl.it/services/servizioapp/domandeNew";
 
         public const string login = 
             "https://amorosoconcorsi.ak12srl.it/services/servizioapp/login";
@@ -33,13 +31,9 @@ namespace QuizAmoroso.DataModel
 
         public const string domconcorsorandom = 
             "https://amorosoconcorsi.ak12srl.it/services/servizioapp/domconcorsorandom";
-        public const string domconcorsorandomNew = 
-            "https://amorosoconcorsi.ak12srl.it/services/servizioapp/domconcorsorandomNew";
 
         public const string domconcorsosequenza = 
             "https://amorosoconcorsi.ak12srl.it/services/servizioapp/domconcorsosequenza";
-        public const string domconcorsosequenzaNew = 
-            "https://amorosoconcorsi.ak12srl.it/services/servizioapp/domconcorsosequenzaNew";
 
         public const string sessione = 
             "https://amorosoconcorsi.ak12srl.it/services/servizioapp/sessione";
@@ -73,8 +67,6 @@ namespace QuizAmoroso.DataModel
 
         public const string domconcorsorandomtotali = 
             "https://amorosoconcorsi.ak12srl.it/services/servizioapp/domconcorsorandomtotali";
-        public const string domconcorsorandomtotaliNew = 
-            "https://amorosoconcorsi.ak12srl.it/services/servizioapp/domconcorsorandomtotaliNew";
 
         public const string invioTempiGlobali = 
             "https://amorosoconcorsi.ak12srl.it/services/servizioapp/invioTempi";

@@ -100,7 +100,7 @@ namespace QuizAmoroso
                 var values = new List<KeyValuePair<string, string>>();
                 values.Add(new KeyValuePair<string, string>("nome_set", nomeset));
                 var content = new FormUrlEncodedContent(values);
-                var result = await client.PostAsync(Costanti.domandeNew, content);
+                var result = await client.PostAsync(Costanti.domande, content);
                 resultcontent = await result.Content.ReadAsStringAsync();
 
                 if (resultcontent.ToString() == "Impossibile connettersi al servizio")

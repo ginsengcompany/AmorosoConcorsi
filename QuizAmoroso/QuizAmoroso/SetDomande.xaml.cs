@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Newtonsoft.Json;
-using System.Net.Http;
 using QuizAmoroso.DataModel;
 
 namespace QuizAmoroso
@@ -28,8 +26,6 @@ namespace QuizAmoroso
         //variabile booleana che restituisce, se true, l'avvenimento con successo della connessione.
         private bool flag = false;
 
-
-
         //Costruttore, inizializza i componenti e il caricamento della list view.
         public SetDomande()
         {
@@ -48,8 +44,6 @@ namespace QuizAmoroso
                 List<DatiSetDomande> items = JsonConvert.DeserializeObject<List<DatiSetDomande>>(PianoFormativo.risultatoSetDiDomandeAssociateAlPiano);
                 lstCategorie.ItemsSource = items; 
             }
-
-
         }
 
         /**
@@ -76,10 +70,6 @@ namespace QuizAmoroso
                 StackActivityIndicator.IsVisible = true;
                 caricamentoPagina.IsRunning = true;
                 caricamentoPagina.IsVisible = true;
-                await invioDatiSelezionati();
-                caricamentoPagina.IsRunning = false;
-                caricamentoPagina.IsVisible = false;
-                StackActivityIndicator.IsVisible = false;
                 if (Device.OS != TargetPlatform.Windows)
                 {
                     lstCategorie.SelectedItem = Color.Blue;
@@ -89,40 +79,15 @@ namespace QuizAmoroso
                 {
                     await Navigation.PushAsync(new ModalitaQuiz());
                 }
+                caricamentoPagina.IsRunning = false;
+                caricamentoPagina.IsVisible = false;
+                StackActivityIndicator.IsVisible = false;
+
                 lstCategorie.IsEnabled = true;
             }
             catch (Exception b)
             {
                 await DisplayAlert("Attenzione", "Connessione non riuscita", "riprova");
-            }
-        }
-
-        /**
-         * Il metodo seguente crea una connessione al server, e gli invia il nome_set.
-         */
-        public async Task invioDatiSelezionati()
-        {
-            string username = Utente.Instance.getUserName;
-            var client = new HttpClient();
-            try
-            {
-                var values = new List<KeyValuePair<string, string>>();
-                values.Add(new KeyValuePair<string, string>("nome_set", setDomandeSelezionato.nome_set));
-                var content = new FormUrlEncodedContent(values);
-                var result = await client.PostAsync(Costanti.domande, content);
-                resultContent = await result.Content.ReadAsStringAsync();
-                if (resultContent.ToString() == "Impossibile connettersi al servizio")
-                {
-                    flag = true;
-                }
-                else
-                {
-                    flag = false;
-                }
-            }
-            catch (Exception e)
-            {
-                await DisplayAlert("Errore", resultContent.ToString(), "Ok");
             }
         }
     }

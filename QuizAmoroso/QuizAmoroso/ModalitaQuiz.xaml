@@ -22,22 +22,22 @@
                            FontAttributes="Bold"
                            VerticalOptions="Center"
                            HorizontalOptions="Center"/>
-                    <Image x:Name = "btnDispensa" Source="button_dispensa.png" WidthRequest="200">
+                <Image x:Name = "btnDispensa" Source="button_dispensa.png" WidthRequest="200" IsVisible="False">
                         <Image.GestureRecognizers>
                             <TapGestureRecognizer Tapped="btnDispensa_Clicked" NumberOfTapsRequired="1"/>
                         </Image.GestureRecognizers>
                     </Image>
-                    <Image x:Name = "bntApprendimento" Source="button_apprendimento.png" WidthRequest="200" >
+                <Image x:Name = "bntApprendimento" Source="button_apprendimento.png" WidthRequest="200" IsVisible="False">
                         <Image.GestureRecognizers>
                             <TapGestureRecognizer Tapped="bntApprendimento_Clicked" NumberOfTapsRequired="1"/>
                         </Image.GestureRecognizers>
                     </Image>
-                    <Image x:Name = "bntSimulazioneAssistita" Source="button_simulazioneassistita.png" WidthRequest="200" >
+                <Image x:Name = "bntSimulazioneAssistita" Source="button_simulazioneassistita.png" WidthRequest="200" IsVisible="False">
                         <Image.GestureRecognizers>
                             <TapGestureRecognizer Tapped="bntSimulazioneAssistita_Clicked" NumberOfTapsRequired="1"/>
                         </Image.GestureRecognizers>
                     </Image>
-                    <Image x:Name = "btnSimulazione" Source="button_simulazione.png" WidthRequest="200" >
+                    <Image x:Name = "btnSimulazione" Source="button_simulazione.png" WidthRequest="200" IsVisible="False">
                         <Image.GestureRecognizers>
                             <TapGestureRecognizer Tapped="btnSimulazione_Clicked" NumberOfTapsRequired="1"/>
                         </Image.GestureRecognizers>

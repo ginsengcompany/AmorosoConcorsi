@@ -89,18 +89,18 @@ namespace QuizAmoroso
                 if (modalitaSelezionata == "Modalità Casuale" && QuizVeloce.idConcorsoSelezionato != Costanti.eseguiTestSuInteroDb)
                 {
                     content = new FormUrlEncodedContent(values);
-                    result = await client.PostAsync(Costanti.domconcorsorandomNew, content);
+                    result = await client.PostAsync(Costanti.domconcorsorandom, content);
                 }
                 else if (modalitaSelezionata == "Modalità Casuale" && QuizVeloce.idConcorsoSelezionato == Costanti.eseguiTestSuInteroDb)
                 {
                     content = new FormUrlEncodedContent(values);
-                    result = await client.PostAsync(Costanti.domconcorsorandomtotaliNew, content);
+                    result = await client.PostAsync(Costanti.domconcorsorandomtotali, content);
                 }
                 else
                 {
                     values.Add(new KeyValuePair<string, string>("domandainiziale", QuizVeloce.numeroselezionato.ToString()));
                     content = new FormUrlEncodedContent(values);
-                    result = await client.PostAsync(Costanti.domconcorsosequenzaNew, content);
+                    result = await client.PostAsync(Costanti.domconcorsosequenza, content);
                 }
 
                 resultcontent = await result.Content.ReadAsStringAsync();
