@@ -32,6 +32,11 @@ namespace QuizAmoroso
                     i.esito = "esatta";
                     i.color = Color.Green;
                 }
+                if(i.risposta_utente == "Non Risposta")
+                {
+                    i.esito = "Saltata";
+                    i.color = Color.FromHex("2196f3");
+                }
                 /*
                  * Da eliminare quando saranno attivi i servizi
                  * */

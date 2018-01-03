@@ -25,6 +25,7 @@
                                            VerticalTextAlignment="Start"
                                            FontAttributes="Bold"/>
                                 <Label Text="Tua Risposta" 
+                                       FontAttributes="Bold"
                                            HorizontalOptions="Center"
                                            IsVisible="{Binding lbl_RispostaUtente}"
                                            TextColor="Black">
@@ -35,6 +36,7 @@
                                            VerticalTextAlignment="Start"
                                            IsVisible="{Binding lbl_RispostaUtente}"/>
                                 <Label Text="Risposta Esatta" 
+                                       FontAttributes="Bold"
                                            HorizontalOptions="Center"
                                            TextColor="Black">
                                 </Label>
@@ -43,11 +45,13 @@
                                            HorizontalTextAlignment="Center"
                                            VerticalTextAlignment="Start"/>
                                 <Label Text="Esito" 
+                                       FontAttributes="Bold"
                                            HorizontalOptions="Center"
                                            TextColor="Black">
                                 </Label>
                                 <Label Text="{Binding esito}"
                                            TextColor="{Binding color}"
+                                       FontAttributes="Bold"
                                            HorizontalTextAlignment="Center"
                                            VerticalTextAlignment="Start"/>
                             </StackLayout>
