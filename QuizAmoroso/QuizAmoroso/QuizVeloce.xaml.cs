@@ -488,12 +488,10 @@ namespace QuizAmoroso
                             switch (Device.RuntimePlatform)
                             {
                                 case Device.iOS:
-                                    await Navigation.PushAsync(new NuovaModalitaQuizVeloceNew(modalitaSelezionata));
-                                    //await Navigation.PushAsync(new NuovaModalitàQuizVeloceIOS(modalitaSelezionata));
+                                    await Navigation.PushAsync(new NuovaModalitàQuizVeloceIOS(modalitaSelezionata));
                                     break;
                                 default:
-                                    //await Navigation.PushAsync(new NuovaModalitàQuizVeloceCasuale(modalitaSelezionata));
-                                    await Navigation.PushAsync(new NuovaModalitaQuizVeloceNew(modalitaSelezionata));
+                                    await Navigation.PushAsync(new NuovaModalitàQuizVeloceCasuale(modalitaSelezionata));
                                     break;
                             }
                         }
@@ -503,12 +501,10 @@ namespace QuizAmoroso
                             switch (Device.RuntimePlatform)
                             {
                                 case Device.iOS:
-                                    await Navigation.PushAsync(new NuovaModalitaQuizVeloceNew(modalitaSelezionata));
-                                    //await Navigation.PushAsync(new NuovaModalitàQuizVeloceIOS(modalitaSelezionata));
+                                    await Navigation.PushAsync(new NuovaModalitàQuizVeloceIOS(modalitaSelezionata));
                                     break;
                                 default:
-                                    //await Navigation.PushAsync(new NuovaModalitàQuizVeloceCasuale(modalitaSelezionata));
-                                    await Navigation.PushAsync(new NuovaModalitaQuizVeloceNew(modalitaSelezionata));
+                                    await Navigation.PushAsync(new NuovaModalitàQuizVeloceCasuale(modalitaSelezionata));
                                     break;
                             }
                         }
@@ -520,12 +516,10 @@ namespace QuizAmoroso
                             switch (Device.RuntimePlatform)
                             {
                                 case Device.iOS:
-                                    await Navigation.PushAsync(new NuovaModalitaQuizVeloceNew(modalitaSelezionata));
-                                    //await Navigation.PushAsync(new NuovaModalitàQuizVeloceIOS(modalitaSelezionata));
+                                    await Navigation.PushAsync(new NuovaModalitàQuizVeloceIOS(modalitaSelezionata));
                                     break;
                                 default:
-                                    //await Navigation.PushAsync(new NuovaModalitàQuizVeloceCasuale(modalitaSelezionata));
-                                    await Navigation.PushAsync(new NuovaModalitaQuizVeloceNew(modalitaSelezionata));
+                                    await Navigation.PushAsync(new NuovaModalitàQuizVeloceCasuale(modalitaSelezionata));
                                     break;
                             }
                         }
@@ -535,12 +529,10 @@ namespace QuizAmoroso
                             switch (Device.RuntimePlatform)
                             {
                                 case Device.iOS:
-                                    await Navigation.PushAsync(new NuovaModalitaQuizVeloceNew(modalitaSelezionata));
-                                    //await Navigation.PushAsync(new NuovaModalitàQuizVeloceIOS(modalitaSelezionata));
+                                    await Navigation.PushAsync(new NuovaModalitàQuizVeloceIOS(modalitaSelezionata));
                                     break;
                                 default:
-                                    //await Navigation.PushAsync(new NuovaModalitàQuizVeloceCasuale(modalitaSelezionata));
-                                    await Navigation.PushAsync(new NuovaModalitaQuizVeloceNew(modalitaSelezionata));
+                                    await Navigation.PushAsync(new NuovaModalitàQuizVeloceCasuale(modalitaSelezionata));
                                     break;
                             }
                         }

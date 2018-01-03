@@ -132,16 +132,13 @@ namespace QuizAmoroso
                 // Bottone Avanti disabilitato dopo il suo click
                 BottoneAvanti.IsEnabled = false;
                 // Viene lanciata la pagina Dispensa
-                //await Navigation.PushAsync(new Dispensa());
-                await Navigation.PushAsync(new DispensaNew());
+                await Navigation.PushAsync(new Dispensa());
             }
             else if (sceltaModalita == 2)
             {
                 // Bottone Avanti disabilitato dopo il suo click
                 BottoneAvanti.IsEnabled = false;
                 // Viene lanciata la pagina Simulazione
-                await Navigation.PushAsync(new SimulazioneNew());
-                /*
                 switch (Device.RuntimePlatform)
                 {
                     case Device.iOS:
@@ -153,23 +150,21 @@ namespace QuizAmoroso
                     case Device.UWP:
                         await Navigation.PushAsync(new SimulazioneIOS());
                         break;
-                }*/
+                }
             }
             else if (sceltaModalita == 3)
             {
                 // Bottone Avanti disabilitato dopo il suo click
                 BottoneAvanti.IsEnabled = false;
                 // Viene lanciata la pagina Apprendimento
-                // await Navigation.PushAsync(new Apprendimento());
-                await Navigation.PushAsync(new ApprendimentoNew());
+                await Navigation.PushAsync(new Apprendimento());
             }
             else if (sceltaModalita == 4)
             {
                 // Bottone Avanti disabilitato dopo il suo click
                 BottoneAvanti.IsEnabled = false;
                 // Viene lanciata la pagina Simulazione
-                //await Navigation.PushAsync(new SimulazioneAssistita());
-                await Navigation.PushAsync(new SimulazioneAssistitaNew());
+                await Navigation.PushAsync(new SimulazioneAssistita());
             }
             // Vengono disattivate tutte le label ed i bottoni presenti nella pagina
             labelSpiegazione.Text = "";
