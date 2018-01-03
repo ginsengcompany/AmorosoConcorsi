@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xfx="clr-namespace:Xfx;assembly=Xfx.Controls"
              x:Class="QuizAmoroso.QuizVeloce"
              Title="SpeedQuiz" 
              Icon="quizVeloce.png"
@@ -56,22 +57,24 @@
                                Color="#2196f3" HorizontalOptions="Center">
                         </ActivityIndicator> 
 
-                        <StackLayout Orientation="Horizontal" Spacing="10">
+                        <StackLayout Orientation="Horizontal" >
                             <Label x:Name="LabelNumeroPartenza" 
                                    Text="Inserisci il numero di partenza delle domande"
+                                   VerticalOptions="Center"
                                    TextColor="#2196f3"
                                    IsVisible="False">
                             </Label>
-                            <Entry x:Name="EntryNumeroPartenza" 
-                                   IsVisible="False"
-                                   Placeholder="1"
-                                   PlaceholderColor="LightGray"
-                                   TextColor="#6ec6ff"
-                                   WidthRequest="50"
-                                   Margin="5"
-                                   Keyboard="Numeric"
-                                   >
-                            </Entry>
+                            <xfx:XfxEntry 
+                                x:Name="EntryNumeroPartenza"
+                                IsVisible="False"
+                                VerticalOptions="Center"
+                                Placeholder="Inserisci"
+                                PlaceholderColor="LightGray"
+                                TextColor="#6ec6ff"
+                                HorizontalTextAlignment="Center"
+                                WidthRequest="80" 
+                                Keyboard="Numeric" >
+                            </xfx:XfxEntry>
                         </StackLayout>
 
                         <StackLayout Orientation="Horizontal">
