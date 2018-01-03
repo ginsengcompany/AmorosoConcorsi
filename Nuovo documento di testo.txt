@@ -1,0 +1,206 @@
+        protected async override void OnAppearing()
+        {
+            if (picker_selezioneConcorso.Items.Any())
+            {
+                picker_selezioneConcorso.Items.Clear();
+                listaConcorsi.Clear();
+                listaIdConcorsi.Clear();
+                listaCorrezioneEsatte.Clear();
+                listaCorrezioneErrate.Clear();
+                listaNumeroDomandeMassimoDelTestQuizVeloce.Clear();
+                listaNumeroDomandeDelConcorso.Clear();
+                if (picker_selezioneMateria.Items.Any())
+                {
+                    picker_selezioneMateria.Items.Clear();
+                    listaMaterie.Clear(); //TO DO: verificare pulizia lista dati                    
+                    listaMaterieQuizVeloce.Clear();
+
+                    picker_selezioneMateria.IsVisible = false;
+                    labelSelezionaMateria.IsVisible = false;
+                    if (picker_selezioneModalita.Items.Any())
+                    {
+                        picker_selezioneModalita.Items.Clear();
+                        picker_selezioneModalita.IsVisible = false;
+                        labelSelezionaModalita.IsVisible = false;
+                        AttivaSelezioneManualeNumeroDomande.IsVisible = false;
+                        LabelAttivaSwitchSelezioneDomande.IsVisible = false;
+                        LabelNumeroPartenza.IsVisible = false;
+                        EntryNumeroPartenza.IsVisible = false;
+                        LabelSliderNumeroDomande.IsVisible = false;
+                        SliderSelezioneNumeroDomande.IsVisible = false;
+                        LabelValoriSelezionatiConSlider.IsVisible = false;
+                        LabelMinimoSlider.IsVisible = false;
+                        LabelMassimoSlider.IsVisible = false;
+                        buttonQuizVeloce.IsVisible = false;
+                    }
+                }
+            }
+            caricamentoPagina.IsRunning = true;
+            caricamentoPagina.IsVisible = true;
+            await AttesaRicezioneConcorsi();
+            caricamentoPagina.IsRunning = false;
+            caricamentoPagina.IsVisible = false;
+        }
+
+        public async Task AttesaRicezioneConcorsi()
+        {
+            try
+            {
+                string username = Utente.Instance.getUserName;
+                var client = new HttpClient();
+                var values = new List<KeyValuePair<string, string>>();
+                values.Add(new KeyValuePair<string, string>("username", username));
+                var content = new FormUrlEncodedContent(values);
+                try
+                {
+                    var result = await client.PostAsync(Costanti.concorsi, content);
+                    risultatoChiamataQuizVeloce = await result.Content.ReadAsStringAsync();
+                    if (risultatoChiamataQuizVeloce == "null")
+                    {
+                        listaConcorsi.Add(testSuInteroDB);
+                        listaIdConcorsi.Add(testSuInteroDB.id_concorso);
+                        picker_selezioneConcorso.Items.Add(eseguiTestSuInteroDb);
+                        listaCorrezioneEsatte.Add(Single.Parse(testSuInteroDB.rispostaesatta, CultureInfo.InvariantCulture));
+                        listaCorrezioneErrate.Add(Single.Parse(testSuInteroDB.rispostaerrata, CultureInfo.InvariantCulture));
+                        listaNumeroDomandeMassimoDelTestQuizVeloce.Add(Convert.ToInt16(testSuInteroDB.numerodomande));
+                        listaNumeroDomandeDelConcorso.Add(Convert.ToInt16(testSuInteroDB.domandemax));
+                        Exception errore = new Exception();
+                        throw errore;
+                    }
+                    else
+                    {
+                        listaConcorsi = JsonConvert.DeserializeObject<List<StrutturaPickerConcorso>>(risultatoChiamataQuizVeloce);
+                        if (listaConcorsi.Any())
+                        {
+                            if (picker_selezioneConcorso.Items.Any())
+                            {
+                                picker_selezioneConcorso.Items.Clear();
+                            }
+
+                            foreach (StrutturaPickerConcorso i in listaConcorsi)
+                            {
+                                corpo = i.Corpo;
+                                idConcorso = i.id_concorso;
+                                string codice_concorso = i.codice_concorso;
+                                listaIdConcorsi.Add(idConcorso);
+                                picker_selezioneConcorso.Items.Add(" Concorso: " + corpo + "\n" + " Codice: " + codice_concorso);
+                                listaCorrezioneEsatte.Add(Single.Parse(i.rispostaesatta, CultureInfo.InvariantCulture));
+                                listaCorrezioneErrate.Add(float.Parse(i.rispostaerrata, CultureInfo.InvariantCulture));
+                                listaNumeroDomandeMassimoDelTestQuizVeloce.Add(Convert.ToInt16(i.numerodomande));
+                                listaNumeroDomandeDelConcorso.Add(Convert.ToInt16(i.domandemax));
+                            }
+                            listaIdConcorsi.Add(eseguiTestSuInteroDb);
+                            picker_selezioneConcorso.Items.Add(eseguiTestSuInteroDb);
+                            listaCorrezioneEsatte.Add(1);
+                            listaCorrezioneErrate.Add(0);
+                            listaNumeroDomandeMassimoDelTestQuizVeloce.Add(Costanti.numeroMassimoDomandeAmmesso);
+                            listaNumeroDomandeDelConcorso.Add(Costanti.numeroMassimoDomandeAmmesso);
+                        }
+                    }
+                }
+                catch (Exception errore)
+                {
+                    await DisplayAlert("Attenzione", "Non sono presenti concorsi. E' comunque possibile esercitarsi sull'intera banca dati.", "Ok");
+                }
+            }
+            catch (Exception errore)
+            {
+                await DisplayAlert("Attenzione", "Connessione persa durante il caricamento dei concorsi.", "Ok");
+            }
+        }
+
+geo json italy
+
+{ "type": "MultiPolygon", 
+  "coordinates":
+[
+[[
+[4, 36], 
+[20, 36], 
+[20, 48], 
+[4, 48], 
+[4, 36]
+]]
+]
+}
+
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string>Icon-60@2x</string>
+		<string>Icon-60@3x</string>
+		<string>Icon-76</string>
+		<string>Icon-76@2x</string>
+		<string>Default</string>
+		<string>Default@2x</string>
+		<string>Default-568h@2x</string>
+		<string>Default-Portrait</string>
+		<string>Default-Portrait@2x</string>
+		<string>Icon-Small-40</string>
+		<string>Icon-Small-40@2x</string>
+		<string>Icon-Small-40@3x</string>
+		<string>Icon-Small</string>
+		<string>Icon-Small@2x</string>
+		<string>Icon-Small@3x</string>
+	</array> 
+
+<key>MinimumOSVersion</key>
+<string>8.0</string> 
+
+https://developer.xamarin.com/guides/android/application_fundamentals/resources_in_android/part_4_-_creating_resources_for_varying_screens/
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UIDeviceFamily</key>
+	<array>
+		<integer>1</integer>
+		<integer>2</integer>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>MinimumOSVersion</key>
+		<string>9.3</string>
+	<key>CFBundleDisplayName</key>
+	<string>Amoroso Concorsi</string>
+	<key>CFBundleIdentifier</key>
+	<string>it.gesan.QuizAmoroso</string>
+	<key>CFBundleVersion</key>
+	<string>1.0.4</string>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>LaunchScreen</string>
+	<key>UIRequiresFullScreen</key>
+	<true/>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>arm64</string>
+	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>Tipo di URL 1</string>
+		</dict>
+	</array>
+	<key>XSAppIconAssets</key>
+	<string>Resources/Elementi multimediali.xcassets/Icone dell&apos;app.appiconset</string>
+	<key>XSLaunchImageAssets</key>
+	<string>Resources/Elementi multimediali.xcassets/Immagini di avvio.launchimage</string>
+	<key>CFBundleShortVersionString</key>
+	<string>5</string>
+</dict>
+</plist>

@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuizAmoroso.NuovaModalitaQuizVeloceNew"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    iOS="0,20,0,0"/>
+    </ContentPage.Padding>
+
+    <ContentPage.BackgroundColor>
+        <OnPlatform x:TypeArguments="Color" WinPhone="White" Android="LightCyan" iOS="LightCyan"/>
+    </ContentPage.BackgroundColor>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout x:Name="StackNuovaModalitaQuizVeloce">
+                <StackLayout VerticalOptions="Start" x:Name="LayoutPrincipalePaginaQuizVeloceCasuale">
+                    <Frame>
+                        <Frame.BackgroundColor>
+                            <OnPlatform x:TypeArguments="Color" WinPhone="White" Android="#2196f3" iOS="#2196f3"/>
+                        </Frame.BackgroundColor>
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal">
+
+                                <Image x:Name="TornaAlleModalita"  
+                                   Source="arrow_back_white.png"
+                                   HeightRequest="26">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TornaAlleModalita_Clicked"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+
+                                <Label x:Name="LabelTitoloHeader"
+                                   YAlign="Center"
+                                   XAlign="Center"
+                                   FontSize="Medium"
+                                   FontAttributes="Bold">
+                                    <Label.TextColor>
+                                        <OnPlatform x:TypeArguments="Color" WinPhone="#f30100" Android="White" iOS="White"/>
+                                    </Label.TextColor>
+                                </Label>
+                                <StackLayout HorizontalOptions="CenterAndExpand"></StackLayout>
+                                <StackLayout HorizontalOptions="EndAndExpand">
+                                    <Button x:Name="btn_ApriPDF"
+                                        HorizontalOptions="End"
+                                        Text="Leggi i Brani"
+                                        FontSize="Small"
+                                        IsEnabled="False"
+                                        IsVisible="False"
+                                        Clicked="btn_ApriPDF_Clicked"
+                                        Style="{StaticResource buttonStyle}">
+                                    </Button>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout VerticalOptions="Start">
+                    <Frame x:Name="frameDomanda"
+                           IsVisible="False"
+                           HasShadow="True">
+                        <Label x:Name="lblDomanda"
+                               FontSize="Medium"
+                               FontAttributes="Bold"/>
+                    </Frame>
+                    <Image x:Name="immagine"
+                           IsVisible="False"/>
+                    
+                    <Grid x:Name="GrigliaDomande" RowSpacing="1" ColumnSpacing="1">
+
+                    </Grid>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button x:Name="saltaDomanda"
+                            BackgroundColor="LawnGreen"
+                            HorizontalOptions="StartAndExpand"
+                            Text="Salta Domanda"
+                            TextColor="White"
+                            IsEnabled="False"
+                            IsVisible="False"
+                            Clicked="saltaDomanda_Clicked"/>
+                        <Button x:Name="consegnaSimulazione"
+                            BackgroundColor="PaleVioletRed"
+                            HorizontalOptions="End"
+                            Text="Consegna"
+                            TextColor="White"
+                            IsEnabled="False"
+                            IsVisible="False"
+                            Clicked="consegnaSimulazione_Clicked"/>
+                    </StackLayout>
+
+                    <Label x:Name="lblTempo"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           TextColor="Red"
+                           FontAttributes="Bold"
+                           FontSize="35"/>
+
+                    <ActivityIndicator x:Name="CaricamentoPaginaQuizVeloceCasuale"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"
+                                       Color="#2196f3"/>
+                </StackLayout>
+
+                <RelativeLayout x:Name="RelativeBottoneAvvio">
+                    <Button x:Name="avvioQuiz"
+                            Clicked="avvioQuiz_Clicked"
+                            Text="Avvia"
+                            FontSize="30" 
+                            Style="{StaticResource buttonStyle}"
+                            RelativeLayout.XConstraint="
+                            {
+                            ConstraintExpression Type = RelativeToParent,
+                            Factor = 0.15,
+                            Constant = 0,
+                            Property = Width
+                            }"
+                            RelativeLayout.YConstraint="
+                            {
+                            ConstraintExpression Type = RelativeToParent,
+                            Factor = 0.35,
+                            Constant = 0,
+                            Property = Height
+                            }"
+                            RelativeLayout.WidthConstraint="
+                            {
+                            ConstraintExpression Type = RelativeToParent,
+                            Factor = 0.7,
+                            Constant = 0,
+                            Property = Width
+                            }"
+                            RelativeLayout.HeightConstraint="
+                            {
+                            ConstraintExpression Type = RelativeToParent,
+                            Factor = 0.3,
+                            Constant = 0,
+                            Property = Height
+                            }"/>
+                </RelativeLayout>
+
+                <StackLayout VerticalOptions="CenterAndExpand"></StackLayout>
+                <StackLayout VerticalOptions="End" x:Name="StackFooter">
+                    <StackLayout HorizontalOptions="StartAndExpand"></StackLayout>
+                    <Frame>
+                        <Frame.BackgroundColor>
+                            <OnPlatform x:TypeArguments="Color" WinPhone="White" Android="#2196f3" iOS="#2196f3"/>
+                        </Frame.BackgroundColor>
+                        <StackLayout Orientation="Horizontal">
+                            <Label x:Name="ContatoreDomande"
+                                   YAlign="End"
+                                   FontAttributes="Italic">
+                                <Label.TextColor>
+                                    <OnPlatform x:TypeArguments="Color" WinPhone="#f30100" Android="White" iOS="White"/>
+                                </Label.TextColor>
+                            </Label>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

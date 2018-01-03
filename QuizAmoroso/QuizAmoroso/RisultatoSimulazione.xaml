@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuizAmoroso.RisultatoSimulazione"
+             NavigationPage.HasNavigationBar="False"
+             Title="Risultato">
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    iOS="0,20,0,0"/>
+    </ContentPage.Padding>
+
+    <ContentPage.BackgroundColor>
+        <OnPlatform x:TypeArguments="Color" WinPhone="White" Android="LightCyan" iOS="LightCyan"/>
+    </ContentPage.BackgroundColor>
+    
+    <ContentPage.Content>
+        <ScrollView>
+            
+        <StackLayout Orientation="Vertical" 
+                     Spacing="5">
+                <Frame HasShadow="True" 
+                       HorizontalOptions="Center">
+                    <Frame.BackgroundColor>
+                        <OnPlatform x:TypeArguments="Color" WinPhone="White" Android="LightCyan" iOS="LightCyan"/>
+                    </Frame.BackgroundColor>
+                    <Label x:Name="LblTitolo" 
+                           FontAttributes="Bold"
+                           FontSize="Large"
+                           TextColor="#f30100"
+                           XAlign="Center"
+                           Margin="5">
+                    </Label>
+                </Frame>
+            
+                <StackLayout>
+                    <StackLayout Padding="10">
+                        <StackLayout Orientation="Horizontal">
+                            <Image IsVisible="True"
+                                   WidthRequest="30"
+                                   HeightRequest="30"
+                                   x:Name="IconaRispostaEsatta"
+                                   HorizontalOptions="Start"
+                                   Source="icona_risposta_esatta.png">
+                            </Image>
+                            <Label Text="Risposte esatte" 
+                                   HorizontalOptions="Center" 
+                                   FontSize="Large" 
+                                   TextColor="Black" 
+                                   FontAttributes="Bold">
+                            </Label>
+                        </StackLayout>
+                        
+                        <Frame HasShadow="True" 
+                               BackgroundColor="#2196f3"
+                               CornerRadius="10">
+                            <Label x:Name="LabelEsatte" 
+                                   Text="0" 
+                                   HorizontalOptions="Center" 
+                                   FontSize="Large" 
+                                   TextColor="White">
+                            </Label>
+                        </Frame>
+                    </StackLayout>
+                </StackLayout>
+            
+                <StackLayout Padding="10">
+                    <StackLayout Orientation="Horizontal">
+                        <Image IsVisible="True"
+                               WidthRequest="30"
+                               HeightRequest="30"
+                               x:Name="IconaRispostaErrata"
+                               HorizontalOptions="Start"
+                               Source="icona_risposta_errata.png">
+                        </Image>
+                        <Label Text="Risposte sbagliate" 
+                               HorizontalOptions="Center" 
+                               FontSize="Large" 
+                               TextColor="Black"
+                               FontAttributes="Bold">
+                        </Label>
+                    </StackLayout>
+                    <Frame HasShadow="True" 
+                           BackgroundColor="#2196f3" 
+                           CornerRadius="10">
+                        <Label x:Name="LabelSbagliate" 
+                               Text="0" 
+                               HorizontalOptions="Center" 
+                               FontSize="Large"  
+                               TextColor="White">
+                        </Label>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout Padding="10">
+                    <StackLayout Orientation="Horizontal">
+                        <Image IsVisible="True"
+                               WidthRequest="30"
+                               HeightRequest="30"
+                               x:Name="IconaNonRisposte"
+                               HorizontalOptions="Start"
+                               Source="icona_non_risposta.png">
+                        </Image>
+                        <Label Text="Quesiti senza risposta" 
+                               HorizontalOptions="Center" 
+                               FontSize="Large" 
+                               TextColor="Black"
+                               FontAttributes="Bold">
+                        </Label>
+                    </StackLayout>
+                    <Frame HasShadow="True" 
+                           BackgroundColor="#2196f3" 
+                           CornerRadius="10">
+                        <Label x:Name="LabelNonRisposte" 
+                               Text="0" 
+                               HorizontalOptions="Center" 
+                               FontSize="Large"  
+                               TextColor="White">
+                        </Label>
+                    </Frame>
+                </StackLayout>
+            
+                <StackLayout Padding="10">
+                    <StackLayout Orientation="Horizontal">
+                        <Image IsVisible="True"
+                               WidthRequest="30"
+                               HeightRequest="30"
+                               x:Name="IconaTempoTrascorso"
+                               HorizontalOptions="Start"
+                               Source="icona_tempo_trascorso.png">
+                        </Image>
+                        <Label Text="Tempo Totale" 
+                               HorizontalOptions="Center" 
+                               FontSize="Large" 
+                               TextColor="Black"
+                               FontAttributes="Bold">
+                        </Label>
+                    </StackLayout>
+                    <Frame HasShadow="True" 
+                           BackgroundColor="#2196f3"
+                           CornerRadius="10">
+                        <Label x:Name="LabelTempo" 
+                               Text="0" 
+                               HorizontalOptions="Center" 
+                               FontSize="Large" 
+                               TextColor="White">
+                        </Label>
+                    </Frame>
+                </StackLayout>
+                <StackLayout Padding="10" x:Name="stackPunteggio">
+                    <Label Text="Punteggio" 
+                           HorizontalOptions="Center" 
+                           FontSize="Large" 
+                           TextColor="Black" 
+                           FontAttributes="Bold">
+                    </Label>
+
+                    <Frame HasShadow="True" 
+                           BackgroundColor="#2196f3"
+                            CornerRadius="10">
+                        <Label x:Name="labelPunteggio" 
+                               Text="0" 
+                               HorizontalOptions="Center" 
+                               FontSize="Large" 
+                               TextColor="White">
+                        </Label>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout Padding="10" x:Name="stackPunteggioNormalizzato">
+                    <Label 
+                        Text="Punteggio Normalizzato su 100 domande" 
+                           HorizontalOptions="Center" 
+                           FontSize="Large" 
+                           TextColor="Black"
+                           FontAttributes="Bold">
+                    </Label>
+                    <Frame
+                        HasShadow="True" 
+                        BackgroundColor="#2196f3"
+                        CornerRadius="10">
+                        <Label 
+                            x:Name="LabelPunteggioTotalizzato" 
+                            Text="0" 
+                            HorizontalOptions="Center" 
+                            FontSize="Large" 
+                            TextColor="White">
+                        </Label>
+                    </Frame>
+                </StackLayout>
+                <Button x:Name="btnRisultatiDettaglio"
+                        Text="Guarda i risultati in dettaglio" 
+                        Clicked="Button_Clicked"
+                        Margin="5"
+                        Style="{StaticResource buttonStyle}">
+                </Button>
+                <Button x:Name="btnRitornaHome" 
+                        Clicked="Button_Clicked_1" 
+                        Text="Ritorna alla Home"
+                        Margin="5"
+                        Style="{StaticResource buttonStyle}">
+                    
+                </Button>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

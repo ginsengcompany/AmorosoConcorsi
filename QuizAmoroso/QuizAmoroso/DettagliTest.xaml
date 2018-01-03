@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuizAmoroso.DettagliTest"
+             Title="Dettagli">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="lstRisultati"
+                      CachingStrategy="RecycleElement"
+                      HasUnevenRows="True"
+                      SeparatorColor="Black"
+                      IsVisible="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="{Binding Domanda}"
+                                       TextColor="Black"
+                                       FontAttributes="Bold"
+                                       FontSize="Medium"
+                                       HorizontalTextAlignment="Center"
+                                       YAlign="Start"
+                                       XAlign="Center"/>
+                                <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+                                    <Label Text="Tua risposta:"
+                                           TextColor="Black"
+                                           XAlign="Center"
+                                           FontAttributes="Bold">
+                                    </Label>
+                                    <Label Text="{Binding tuaRisposta}"
+                                           TextColor="Black"
+                                           FontSize="Medium"
+                                           HorizontalOptions="CenterAndExpand"
+                                           FontAttributes="Italic"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+                                    <Label Text="Risposta esatta:"
+                                           TextColor="Black"
+                                           XAlign="Center"
+                                           FontAttributes="Bold">
+                                    </Label>
+                                    <Label Text="{Binding risposta}"
+                                           TextColor="Black"
+                                           FontAttributes="Italic"
+                                           HorizontalOptions="CenterAndExpand"
+                                           FontSize="Medium"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+                                    <Label Text="Esito:"
+                                           TextColor="Black"
+                                           XAlign="Start"
+                                           FontAttributes="Bold">
+                                    </Label>
+                                    <Label x:Name="LabelEsito"
+                                           Text="{Binding rispostaEsattaYN}"
+                                           FontAttributes="Italic"
+                                           FontSize="Medium"
+                                           HorizontalOptions="CenterAndExpand"
+                                           TextColor="{Binding color}"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

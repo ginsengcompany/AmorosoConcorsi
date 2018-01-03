@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuizAmoroso.DispensaNew"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.BackgroundColor>
+        <OnPlatform x:TypeArguments="Color" WinPhone="White" Android="LightCyan" iOS="LightCyan"/>
+    </ContentPage.BackgroundColor>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+
+                <StackLayout VerticalOptions="Start">
+                    <Frame>
+                        <Frame.BackgroundColor>
+                            <OnPlatform x:TypeArguments="Color" WinPhone="White" Android="#2196f3" iOS="#2196f3"/>
+                        </Frame.BackgroundColor>
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal">
+
+                                <Image x:Name="TornaAlleModalita"  
+                                       Source="arrow_back_white.png"
+                                       HeightRequest="26">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TornaAlleModalita_Clicked"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+
+                                <Label x:Name="LabelTitoloHeader"
+                                       YAlign="Center"
+                                       XAlign="Center"
+                                       FontSize="Medium"
+                                       FontAttributes="Bold">
+                                    <Label.TextColor>
+                                        <OnPlatform x:TypeArguments="Color" WinPhone="#f30100" Android="White" iOS="White"/>
+                                    </Label.TextColor>
+                                </Label>
+                                <StackLayout HorizontalOptions="CenterAndExpand"></StackLayout>
+                                <StackLayout HorizontalOptions="End">
+                                    <Button x:Name="btn_ApriPDF"
+                                            Text="Leggi i Brani"
+                                            FontSize="Small"
+                                            IsEnabled="False"
+                                            IsVisible="False"
+                                            Clicked="btn_ApriPDF_Clicked"
+                                            Style="{StaticResource buttonStyle}">
+                                    </Button>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+
+                <Frame HasShadow="True" x:Name="FrameDomandaDispensa">
+                    <Label x:Name="lblDomanda"
+                           FontSize="Medium"
+                           FontAttributes="Bold">
+                        <Label.TextColor>
+                            <OnPlatform x:TypeArguments="Color" WinPhone="Black"/>
+                        </Label.TextColor>
+                    </Label>
+                </Frame>
+
+                <StackLayout>
+                    <Image x:Name="immagine"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical">
+                    <Button x:Name="btn" Style="{StaticResource buttonStyle}"/>
+                </StackLayout>
+
+                <StackLayout x:Name="stackCaricamentoPagina">
+                    <ActivityIndicator x:Name="caricamentoPagina"
+                               Color="#2196f3" HorizontalOptions="Center">
+                    </ActivityIndicator>
+                </StackLayout>
+
+                <RelativeLayout>
+                    <Button x:Name="btnIndietro" 
+                            VerticalOptions="EndAndExpand"
+                            Text="Indietro" 
+                            Clicked="btnIndietro_Clicked" 
+                            Style="{StaticResource buttonStyle}"
+                            RelativeLayout.WidthConstraint="
+                            {
+                            ConstraintExpression Type = RelativeToParent, 
+                            Property = Width,
+                            Factor = 0.3
+                            }"
+                            RelativeLayout.XConstraint="
+                            {
+                            ConstraintExpression Type = RelativeToParent, 
+                            Property=Width, 
+                            Constant = 0,
+                            Factor=0.05
+                            }"/>
+
+                    <Button x:Name="btnAvanti" 
+                            Text="Avanti"
+                            Clicked="btnAvanti_Clicked" 
+                            Style="{StaticResource buttonStyle}"
+                            RelativeLayout.WidthConstraint="
+                            {ConstraintExpression Type = RelativeToParent, 
+                            Property = Width,
+                            Factor = 0.3
+                            }"
+                            RelativeLayout.XConstraint="
+                            {ConstraintExpression Type = RelativeToParent, 
+                            Property=Width, 
+                            Constant = 0,
+                            Factor=0.65
+                            }"/>
+                </RelativeLayout>
+
+                <StackLayout VerticalOptions="CenterAndExpand"></StackLayout>
+
+                <StackLayout VerticalOptions="End">
+                    <StackLayout HorizontalOptions="StartAndExpand"></StackLayout>
+                    <Frame>
+                        <Frame.BackgroundColor>
+                            <OnPlatform x:TypeArguments="Color" WinPhone="White" Android="#2196f3" iOS="#2196f3"/>
+                        </Frame.BackgroundColor>
+                        <StackLayout Orientation="Horizontal">
+                            <Label x:Name="ContatoreDomande"
+                                   YAlign="End"
+                                   FontAttributes="Italic">
+                                <Label.TextColor>
+                                    <OnPlatform x:TypeArguments="Color" WinPhone="#f30100" Android="White" iOS="#f30100"/>
+                                </Label.TextColor>
+                            </Label>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuizAmoroso.HistorySessione"
+             Title="Sessioni">
+
+    <ContentPage.Content>
+
+        <StackLayout x:Name="StackHystorySessione">
+            <StackLayout HorizontalOptions="FillAndExpand">
+                <ListView x:Name="lstCronologiaSessioni"
+                          CachingStrategy="RecycleElement"
+                          RowHeight="150" 
+                          SeparatorColor="White"
+                          ItemTapped="lstCronologiaSessioni_ItemTapped">
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame BackgroundColor="#0069c0" 
+                                       HasShadow="True" 
+                                       CornerRadius="10" 
+                                       WidthRequest="300" 
+                                       Margin="10">
+                                    <StackLayout Orientation="Vertical">
+                                        <Label Text="{Binding corpoConcorso}"
+                                               TextColor="White"
+                                               XAlign="Center"
+                                               FontAttributes="Bold"></Label>
+                                        <Label Text="{Binding oraSessione}"
+                                               TextColor="White"
+                                               HorizontalTextAlignment="Center"
+                                               YAlign="Start"
+                                               XAlign="Center"/>
+                                        <Label Text="{Binding nomeSet}"
+                                               TextColor="White"
+                                               HorizontalTextAlignment="Center"
+                                               YAlign="Start"
+                                               XAlign="Center"/>
+                                        <Label Text="{Binding codiceConcorso}"
+                                               TextColor="White"
+                                               HorizontalTextAlignment="Center"
+                                               YAlign="Start"
+                                               XAlign="Center"/>
+                                    </StackLayout>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

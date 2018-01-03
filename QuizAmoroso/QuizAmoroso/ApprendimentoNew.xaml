@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuizAmoroso.ApprendimentoNew"
+             Title="Apprendimento"
+             >
+    <ContentPage.BackgroundColor>
+        <OnPlatform x:TypeArguments="Color" WinPhone="White"/>
+    </ContentPage.BackgroundColor>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <ActivityIndicator x:Name="caricamentoPaginaApprendimentoNew"
+                               Color="#2196f3"/>
+            <ListView x:Name="lstApprendimento"
+                      CachingStrategy="RecycleElement"
+                      HasUnevenRows="True"
+                      SeparatorColor="Black"
+                      IsVisible="True">
+                
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="{Binding Domanda}"
+                                       TextColor="Black"
+                                       FontAttributes="Bold"
+                                       FontSize="Medium"
+                                       HorizontalTextAlignment="Center"
+                                       YAlign="Start"
+                                       XAlign="Center"/>
+                                <StackLayout Orientation="Vertical" Spacing = "10" HorizontalOptions = "Center" >
+
+                                    <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center" IsVisible="{Binding lstQuesiti[0].visible}">
+                                        <Label  Text="{Binding lstQuesiti[0].lettera}"
+                                                TextColor="Black"
+                                                HorizontalOptions="Start"
+                                                FontSize="Small"/>
+                                        <Label Text="{Binding lstQuesiti[0].quesito}"
+                                               FontSize="Small"
+                                               TextColor="{Binding lstQuesiti[0].colore}"
+                                               HorizontalOptions="End"
+                                               FontAttributes="{Binding lstQuesiti[0].attribute}" />
+                                     </StackLayout>
+                                    <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center" IsVisible="{Binding lstQuesiti[1].visible}">
+                                        <Label  Text="{Binding lstQuesiti[1].lettera}"
+                                                TextColor="Black"
+                                                HorizontalOptions="Start"
+                                                FontSize="Small"/>
+                                        <Label Text="{Binding lstQuesiti[1].quesito}"
+                                               FontSize="Small"
+                                               TextColor="{Binding lstQuesiti[1].colore}"
+                                               HorizontalOptions="End"
+                                               FontAttributes="{Binding lstQuesiti[1].attribute}" />
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center" IsVisible="{Binding lstQuesiti[2].visible}">
+                                        <Label  Text="{Binding lstQuesiti[2].lettera}"
+                                                TextColor="Black"
+                                                HorizontalOptions="Start"
+                                                FontSize="Small"/>
+                                        <Label Text="{Binding lstQuesiti[2].quesito}"
+                                               FontSize="Small"
+                                               TextColor="{Binding lstQuesiti[2].colore}"
+                                               HorizontalOptions="End"
+                                               FontAttributes="{Binding lstQuesiti[2].attribute}" />
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center" IsVisible="{Binding lstQuesiti[3].visible}">
+                                        <Label  Text="{Binding lstQuesiti[3].lettera}"
+                                                TextColor="Black"
+                                                HorizontalOptions="Start"
+                                                FontSize="Small"/>
+                                        <Label Text="{Binding lstQuesiti[3].quesito}"
+                                               FontSize="Small"
+                                               TextColor="{Binding lstQuesiti[3].colore}"
+                                               HorizontalOptions="End"
+                                               FontAttributes="{Binding lstQuesiti[3].attribute}" />
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center" IsVisible="{Binding lstQuesiti[4].visible}">
+                                        <Label  Text="{Binding lstQuesiti[4].lettera}"
+                                                TextColor="Black"
+                                                HorizontalOptions="Start"
+                                                FontSize="Small"/>
+                                        <Label Text="{Binding lstQuesiti[4].quesito}"
+                                               FontSize="Small"
+                                               TextColor="{Binding lstQuesiti[4].colore}"
+                                               HorizontalOptions="End"
+                                               FontAttributes="{Binding lstQuesiti[4].attribute}" />
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center" IsVisible="{Binding lstQuesiti[5].visible}">
+                                        <Label  Text="{Binding lstQuesiti[5].lettera}"
+                                                TextColor="Black"
+                                                HorizontalOptions="Start"
+                                                FontSize="Small"/>
+                                        <Label Text="{Binding lstQuesiti[5].quesito}"
+                                               FontSize="Small"
+                                               TextColor="{Binding lstQuesiti[5].colore}"
+                                               HorizontalOptions="End"
+                                               FontAttributes="{Binding lstQuesiti[5].attribute}" />
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center" IsVisible="{Binding lstQuesiti[6].visible}">
+                                        <Label  Text="{Binding lstQuesiti[6].lettera}"
+                                                TextColor="Black"
+                                                HorizontalOptions="Start"
+                                                FontSize="Small"/>
+                                        <Label Text="{Binding lstQuesiti[6].quesito}"
+                                               FontSize="Small"
+                                               TextColor="{Binding lstQuesiti[6].colore}"
+                                               HorizontalOptions="End"
+                                               FontAttributes="{Binding lstQuesiti[6].attribute}" />
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center" IsVisible="{Binding lstQuesiti[7].visible}">
+                                        <Label  Text="{Binding lstQuesiti[7].lettera}"
+                                                TextColor="Black"
+                                                HorizontalOptions="Start"
+                                                FontSize="Small"/>
+                                        <Label Text="{Binding lstQuesiti[7].quesito}"
+                                               FontSize="Small"
+                                               TextColor="{Binding lstQuesiti[7].colore}"
+                                               HorizontalOptions="End"
+                                               FontAttributes="{Binding lstQuesiti[7].attribute}" />
+                                    </StackLayout>
+
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                    <Label Text="Risposta esatta:"
+                                           FontSize="Medium"
+                                           TextColor="Black"
+                                           XAlign="Start"
+                                           FontAttributes="Bold">
+                                    </Label>
+                                    <Label Text="{Binding Risposta}"
+                                           TextColor="Black"
+                                           FontSize="Medium"
+                                           FontAttributes="Italic"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                    <Label Text="argomento:"
+                                           TextColor="Black"
+                                           FontSize="Medium"
+                                           XAlign="Start"
+                                           FontAttributes="Bold"></Label>
+                                    <Label Text="{Binding Materia}"
+                                           TextColor="Black"
+                                           FontAttributes="Italic"/>
+                                </StackLayout>
+                              
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

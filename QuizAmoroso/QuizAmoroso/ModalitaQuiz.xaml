@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuizAmoroso.ModalitaQuiz"
+             NavigationPage.HasNavigationBar="True"
+             Title="Modalità">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="20"
+                         Padding="30"
+                         x:Name="StackScegliModalitaQuiz">
+                <Label x:Name="labelTitoloSet"
+                           Font="30"
+                           FontAttributes="Bold"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           XAlign="Center">
+                    </Label>
+                    <Label FormattedText="Seleziona la modalità di Test"
+                           Font="20"
+                           FontAttributes="Bold"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"/>
+                    <Image x:Name = "btnDispensa" Source="button_dispensa.png" WidthRequest="200">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="btnDispensa_Clicked" NumberOfTapsRequired="1"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image x:Name = "bntApprendimento" Source="button_apprendimento.png" WidthRequest="200" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="bntApprendimento_Clicked" NumberOfTapsRequired="1"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image x:Name = "bntSimulazioneAssistita" Source="button_simulazioneassistita.png" WidthRequest="200" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="bntSimulazioneAssistita_Clicked" NumberOfTapsRequired="1"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image x:Name = "btnSimulazione" Source="button_simulazione.png" WidthRequest="200" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="btnSimulazione_Clicked" NumberOfTapsRequired="1"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+
+                   
+                    <Frame HasShadow="False" 
+                           BackgroundColor="#2196f3"
+                           CornerRadius="15"
+                           IsVisible="False"
+                           x:Name="frameLabel">
+                        <StackLayout Orientation="Vertical">
+                        <Label x:Name="TitoloModalita" 
+                                   TextColor="White"  
+                                   IsVisible="False"
+                                   FontSize="Large"
+                                   HorizontalOptions="CenterAndExpand"
+                                   FontAttributes="Bold"
+                                   HorizontalTextAlignment="Center"></Label>
+                            <Label x:Name="labelSpiegazione" 
+                                   TextColor="White" 
+                                   HeightRequest="200"
+                                   WidthRequest="500"
+                                   IsVisible="False"
+                                   HorizontalOptions="FillAndExpand"
+                                   FontAttributes="Italic"
+                                   HorizontalTextAlignment="Center"
+                                   FontSize="Medium"/>
+                            <Label x:Name="lblTempo" 
+                                   TextColor="White"  
+                                   IsVisible="False"
+                                   HorizontalOptions="FillAndExpand"
+                                   FontAttributes="Italic"
+                                   HorizontalTextAlignment="Center"
+                                   FontSize="Medium">
+                            </Label>
+                            <Button x:Name="BottoneAvanti"
+                                    Text="Entra"
+                                    TextColor="White"
+                                    Clicked="BottoneAvanti_Clicked"
+                                    IsVisible="False"
+                                    BackgroundColor="#0069c0"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

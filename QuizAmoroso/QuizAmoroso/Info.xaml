@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:abstractions="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             x:Class="QuizAmoroso.Info"
+             Title="Info"
+             Icon="ic_info_outline"
+             BackgroundColor="White"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    iOS="0,20,0,0"/>
+    </ContentPage.Padding>
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <StackLayout BackgroundColor="#2196f3">
+                    <StackLayout  HorizontalOptions="StartAndExpand" >
+                        
+                        <StackLayout Orientation="Horizontal">
+                            <abstractions:CircleImage Source="amorosoLogo.png"
+                                                      HeightRequest="110"   
+                                                      WidthRequest="110" 
+                                                      Aspect="AspectFill" 
+                                                      VerticalOptions="Center" 
+                                                      HorizontalOptions="Start"
+                                                      Margin="4">
+                            </abstractions:CircleImage>
+                            <Label x:Name="labelBenvenuto" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" FontSize="Large" FontAttributes="Italic"></Label>
+                        </StackLayout>
+                        
+                        <StackLayout Orientation="Horizontal" BackgroundColor="Transparent">
+                            <Label Text=" Amoroso Concorsi" FontSize="30" TextColor="White" FontAttributes="Italic" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                            <StackLayout HorizontalOptions="CenterAndExpand"></StackLayout>
+                            <abstractions:CircleImage x:Name="facebook" 
+                                                      Source="facebookIcon.png" 
+                                                      WidthRequest="40" HeightRequest="40" 
+                                                      Aspect="AspectFill" 
+                                                      HorizontalOptions="Center" 
+                                                      Margin="4">
+                            </abstractions:CircleImage>
+                            <abstractions:CircleImage x:Name="sitoWeb" 
+                                                      Source="sitoWeb.png" 
+                                                      HeightRequest="40" 
+                                                      WidthRequest="40">
+                            </abstractions:CircleImage>
+                        </StackLayout>
+                        
+                    </StackLayout>
+                </StackLayout>
+                
+                <Label HorizontalOptions="Center" FontSize="Large" FontAttributes="Bold" FormattedText="INFO:"></Label>
+                <StackLayout Padding="10" VerticalOptions="CenterAndExpand">
+                    <Grid ColumnSpacing="15" RowSpacing="15" HorizontalOptions="FillAndExpand">
+                        <Grid.RowDefinitions >
+                            <RowDefinition Height="70"></RowDefinition>
+                            <RowDefinition Height="70"></RowDefinition>
+                            <RowDefinition Height="70"></RowDefinition>
+                            <RowDefinition Height="70"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <StackLayout Grid.Row="0" Grid.Column="0" VerticalOptions="Center">
+                            <Image Source="luogo.png" HorizontalOptions="Center" VerticalOptions="Center"></Image>
+                        </StackLayout>
+                        <StackLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="Start">
+                            <Label x:Name="labelLuogo" FontSize="Medium"  HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Italic" TextColor="Black"></Label>
+                            <Label Text="indirizzo" TextColor="LightGray" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Italic"></Label>
+                        </StackLayout>
+                        <StackLayout Grid.Row="1" Grid.Column="0" VerticalOptions="Center">
+                            <Image Source="telefonoFisso.png" HorizontalOptions="Center" ></Image>
+                        </StackLayout>
+                        <StackLayout Grid.Row="1" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center">
+                            <Label x:Name="numeroTelefonoFisso" Text="08231545081" HorizontalOptions="Center"  FontSize="Medium" FontAttributes="Italic" TextColor="Black"></Label>
+                            <Label Text="telefono" TextColor="LightGray" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Italic"></Label>
+                        </StackLayout>
+                        <StackLayout Grid.Row="2" Grid.Column="0" VerticalOptions="Center">
+                            <Image Source="cellulare.png" HorizontalOptions="Center" VerticalOptions="Center"></Image>
+                        </StackLayout>
+                        <StackLayout HorizontalOptions="Start" VerticalOptions="Center" Grid.Row="2" Grid.Column="1">
+                            <StackLayout Orientation="Horizontal">
+                                <Label x:Name="numeroCellulareUno" Text="3925224680" HorizontalOptions="Center"  FontAttributes="Italic"  FontSize="Medium" TextColor="Black"></Label>
+                                <StackLayout HorizontalOptions="CenterAndExpand"></StackLayout>
+                                <Label x:Name="numeroCellulareDue" Text="3474856700" HorizontalOptions="Center"  FontAttributes="Italic" FontSize="Medium" TextColor="Black"></Label>
+                            </StackLayout>
+                            <Label Text="cellulare" TextColor="LightGray" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Italic"></Label>
+                        </StackLayout>
+                        <StackLayout Grid.Row="3" Grid.Column="0">
+                            <Image Source="email.png" HorizontalOptions="Center" VerticalOptions="Center"></Image>
+                        </StackLayout>
+                        <StackLayout Grid.Row="3" Grid.Column="1" HorizontalOptions="Start">
+                            <Label x:Name="indirizzoMail" Text="cfpcm@hotmail.it" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" FontAttributes="Italic" TextColor="Black"></Label>
+                            <Label Text="e-mail" TextColor="LightGray" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Italic"></Label>
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+                
+                <StackLayout HorizontalOptions="Center" VerticalOptions="End">
+                    <Label x:Name="LabelInformazioneLog" TextColor="Black"  HorizontalOptions="Center" VerticalOptions="Center" FontSize="Small" FontAttributes="Italic"></Label>
+                    <Button x:Name="LogOut" 
+                            FontAttributes="Bold"
+                            FontSize="Large"
+                            WidthRequest="200"
+                            Clicked="LogOut_Clicked" 
+                            Text="Logout"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Style="{StaticResource buttonStyle}"/>
+                </StackLayout>
+                
+                <StackLayout VerticalOptions="End">
+                    <StackLayout.IsVisible>
+                        <OnPlatform x:TypeArguments="x:Boolean" WinPhone="true" Android="true" iOS="false"/>
+                    </StackLayout.IsVisible>
+                    <StackLayout HorizontalOptions="StartAndExpand"></StackLayout>
+                    <Frame>
+                        <Frame.BackgroundColor>
+                            <OnPlatform x:TypeArguments="Color" WinPhone="White" Android="#2196f3" iOS="#2196f3"/>
+                        </Frame.BackgroundColor>
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Powered by " YAlign="End" FontAttributes="Italic">
+                                    <Label.TextColor>
+                                        <OnPlatform x:TypeArguments="Color" WinPhone="Black" Android="White" iOS="#f30100"/>
+                                    </Label.TextColor>
+                                </Label>
+                                <Image x:Name="logoFooter" Source="cerchietto_ak12.png"  HeightRequest="25">
+                                </Image>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

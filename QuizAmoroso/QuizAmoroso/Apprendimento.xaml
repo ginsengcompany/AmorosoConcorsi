@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuizAmoroso.Apprendimento"
+             Title="Apprendimento">
+
+    <ContentPage.BackgroundColor>
+        <OnPlatform x:TypeArguments="Color" WinPhone="White"/>
+    </ContentPage.BackgroundColor>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <ActivityIndicator x:Name="caricamentoPaginaApprendimentoNew"
+                               Color="#2196f3"/>
+            <ListView x:Name="lstApprendimento"
+                      CachingStrategy="RecycleElement"
+                      HasUnevenRows="True"
+                      SeparatorColor="Black"
+                      IsVisible="True">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="{Binding Domanda}"
+                                       TextColor="Black"
+                                       FontAttributes="Bold"
+                                       FontSize="Medium"
+                                       HorizontalTextAlignment="Center"
+                                       YAlign="Start"
+                                       XAlign="Center"/>
+                                <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center">
+                                    <Label Text="A"
+                                           TextColor="Black"
+                                           HorizontalOptions="Start"
+                                           FontSize="Small">
+                                    </Label>
+                                    <Label Text="{Binding A}"
+                                           FontSize="Small"
+                                           TextColor="{Binding colorA}"
+                                           HorizontalOptions="End"
+                                           FontAttributes="{Binding GrassettoA}" />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="Center">
+                                    <Label Text="B"
+                                           TextColor="Black"
+                                           HorizontalOptions="Start"
+                                           FontSize="Small">
+                                    </Label>
+                                    <Label Text="{Binding B}"
+                                           TextColor="{Binding colorB}"
+                                           FontSize="Small"
+                                           HorizontalOptions="End"
+                                           FontAttributes="{Binding GrassettoB}" />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="Center">
+                                    <Label Text="C"
+                                           TextColor="Black"
+                                           FontSize="Small"
+                                           HorizontalOptions="Start">
+                                    </Label>
+                                    <Label Text="{Binding C}"
+                                           TextColor="{Binding colorC}"
+                                           FontSize="Small"
+                                           HorizontalOptions="End"
+                                           FontAttributes="{Binding GrassettoC}"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="Center">
+                                    <Label Text="D"
+                                           TextColor="Black"
+                                           HorizontalOptions="Start"
+                                           FontSize="Small">
+                                    </Label>
+                                    <Label Text="{Binding D}"
+                                           TextColor="{Binding colorD}"
+                                           FontSize="Small"
+                                           HorizontalOptions="End"
+                                           FontAttributes="{Binding GrassettoD}"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                    <Label Text="Risposta esatta:"
+                                           FontSize="Medium"
+                                           TextColor="Black"
+                                           XAlign="Start"
+                                           FontAttributes="Bold">
+                                    </Label>
+                                    <Label Text="{Binding Risposta}"
+                                           TextColor="Black"
+                                           FontSize="Medium"
+                                           FontAttributes="Italic"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                    <Label Text="argomento:"
+                                           TextColor="Black"
+                                           FontSize="Medium"
+                                           XAlign="Start"
+                                           FontAttributes="Bold"></Label>
+                                    <Label Text="{Binding Materia}"
+                                           TextColor="Black"
+                                           FontAttributes="Italic"/>
+                                </StackLayout>
+                              
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

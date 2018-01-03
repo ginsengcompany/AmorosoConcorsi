@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuizAmoroso.Domande"
+             NavigationPage.HasNavigationBar="True"
+         Title="Quiz">
+   
+        <ContentPage.Content>
+        <ScrollView>
+      
+            <StackLayout Padding="10">
+                <Frame HasShadow="True">
+                <Label x:Name="lblDomanda"
+                       FontSize="Medium"
+                       FontAttributes="Bold"/>
+                </Frame>
+
+                <Button x:Name="btnA"
+                    TextColor="White"
+                    Clicked="btnA_Clicked"
+                    BackgroundColor="#0069c0"/>
+                <Button x:Name="btnB"
+                    TextColor="White"
+                    Clicked="btnB_Clicked"
+                     BackgroundColor="#0069c0"/>
+                <Button x:Name="btnC"
+                    TextColor="White"
+                    Clicked="btnC_Clicked"
+                     BackgroundColor="#0069c0"/>
+                <Button x:Name="btnD"
+                    TextColor="White"
+                    Clicked="btnD_Clicked"
+                     BackgroundColor="#0069c0"/>
+                <Frame HasShadow="True"  CornerRadius="10">
+                <Label x:Name="lblTempo"
+                       XAlign="Center"
+                       FontAttributes="Bold"
+                       FontSize="Medium"
+                       Margin="10"/>
+                </Frame>
+            </StackLayout>
+      
+            </ScrollView>
+    </ContentPage.Content>
+   
+</ContentPage>

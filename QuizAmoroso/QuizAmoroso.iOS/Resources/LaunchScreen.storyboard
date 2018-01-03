@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="X5k-f2-b5h" launchScreen="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="gAE-YM-kbH">
+            <objects>
+                <viewController id="X5k-f2-b5h" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y8P-hJ-Z43"/>
+                        <viewControllerLayoutGuide type="bottom" id="9ZL-r4-8FZ"/>
+                    </layoutGuides>
+                    <view key="view" userInteractionEnabled="NO" contentMode="center" id="yd7-JS-zBw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" heightSizable="YES" widthSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Default-Landscape-1024x768.png" translatesAutoresizingMaskIntoConstraints="NO" id="490" highlighted="YES" preservesSuperviewLayoutMargins="YES">
+                                <rect key="frame" x="0.0" y="62" width="600" height="496"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                </accessibility>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                        </accessibility>
+                        <constraints>
+                            <constraint id="4237" firstItem="490" firstAttribute="top" secondItem="Y8P-hJ-Z43" secondAttribute="bottom" constant="42"/>
+                            <constraint id="4238" firstItem="yd7-JS-zBw" firstAttribute="bottom" secondItem="490" secondAttribute="bottom" constant="42">
+                                <variation key="heightClass=regular-widthClass=compact" constant="55"/>
+                            </constraint>
+                            <constraint id="4239" firstItem="490" firstAttribute="trailing" secondItem="yd7-JS-zBw" secondAttribute="trailingMargin" constant="20">
+                                <variation key="heightClass=regular-widthClass=compact" constant="65"/>
+                            </constraint>
+                            <constraint id="4240" firstItem="yd7-JS-zBw" firstAttribute="leadingMargin" secondItem="490" secondAttribute="leading" constant="20">
+                                <variation key="heightClass=regular-widthClass=compact" constant="65"/>
+                            </constraint>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XAI-xm-WK6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="349" y="339"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Default-Landscape-1024x768.png" width="1024" height="768"/>
+        <image name="ak12.jpg" width="399" height="155"/>
+        <image name="ak12_senza_sfondo.png" width="399" height="155"/>
+        <image name="arrow_back_white.png" width="48" height="48"/>
+        <image name="cerchietto_ak12.png" width="192" height="192"/>
+        <image name="cronologia.png" width="24" height="24"/>
+        <image name="cronologia_3x.png" width="72" height="72"/>
+        <image name="cronologia2x.png" width="48" height="48"/>
+        <image name="Default-568h.png" width="320" height="568"/>
+        <image name="Default-Landscape.png" width="1024" height="768"/>
+        <image name="Default-Portrait-768x1024.png" width="768" height="1024"/>
+        <image name="Default-Portrait.png" width="768" height="1024"/>
+        <image name="Default.png" width="320" height="480"/>
+        <image name="ic_info_outline.png" width="24" height="24"/>
+        <image name="ic_info_outline_2x.png" width="48" height="48"/>
+        <image name="ic_info_outline_3x.png" width="72" height="72"/>
+        <image name="ic_library_books.png" width="24" height="24"/>
+        <image name="ic_library_books_2x.png" width="48" height="48"/>
+        <image name="ic_library_books_3x.png" width="72" height="72"/>
+        <image name="ic_password.png" width="48" height="48"/>
+        <image name="ic_password_2x.png" width="96" height="96"/>
+        <image name="ic_password_3x.png" width="144" height="144"/>
+        <image name="ic_trending_up.png" width="24" height="24"/>
+        <image name="ic_trending_up_2x.png" width="48" height="48"/>
+        <image name="ic_trending_up_3x.png" width="72" height="72"/>
+        <image name="ic_user.png" width="48" height="48"/>
+        <image name="ic_user_2x.png" width="96" height="96"/>
+        <image name="ic_user_3x.png" width="144" height="144"/>
+        <image name="Icon-167.png" width="167" height="167"/>
+        <image name="Icon-40.png" width="40" height="40"/>
+        <image name="Icon-57.png" width="57" height="57"/>
+        <image name="Icon-60.png" width="60" height="60"/>
+        <image name="Icon-72.png" width="72" height="72"/>
+        <image name="Icon-76.png" width="76" height="76"/>
+        <image name="Icon-small-29.png" width="29" height="29"/>
+        <image name="Icon-Small.png" width="29" height="29"/>
+        <image name="Icon-small.png" width="29" height="29"/>
+        <image name="icona_risposta_errata.png" width="600" height="600"/>
+        <image name="icona_risposta_esatta.png" width="128" height="128"/>
+        <image name="icona_tempo_trascorso.png" width="64" height="64"/>
+        <image name="logo_amoroso.jpg" width="960" height="477"/>
+        <image name="LogoAmorosoSenzaSfondo.png" width="955" height="475"/>
+        <image name="quizVeloce.png" width="24" height="24"/>
+        <image name="quizVeloce_2x.png" width="48" height="48"/>
+        <image name="quizVeloce_3x.png" width="72" height="72"/>
+        <image name="shwpssw-black.png" width="72" height="72"/>
+        <image name="shwpssw.png" width="144" height="144"/>
+        <image name="appStore.png" width="1024" height="1024"/>
+        <image name="shwpsswblue.png" width="48" height="48"/>
+    </resources>
+    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+</document>

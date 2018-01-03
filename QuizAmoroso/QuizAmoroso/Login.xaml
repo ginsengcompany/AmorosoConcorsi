@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuizAmoroso.Login"
+             xmlns:xfx="clr-namespace:Xfx;assembly=Xfx.Controls"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImage="frecceT.png" >
+
+    <ContentPage.BackgroundColor>
+        <OnPlatform x:TypeArguments="Color" WinPhone="White" Android="White" iOS="LightCyan"/>
+    </ContentPage.BackgroundColor>
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="30">
+
+                <StackLayout Spacing="20"
+                             Orientation="Vertical">
+                    <Image Source="LogoAmorosoSenzaSfondo.png"
+                           WidthRequest="300"
+                           HeightRequest="200"
+                           VerticalOptions="Center"
+                           HorizontalOptions="CenterAndExpand">
+                    </Image>
+                </StackLayout >
+                
+                <StackLayout Padding="10">
+                    
+                    <StackLayout Orientation="Horizontal">
+                        
+                        <Image IsVisible="True"
+                               WidthRequest="30"
+                               HeightRequest="30"
+                               x:Name="ic_user"
+                               HorizontalOptions="Start"
+                               Source="ic_user.png">
+                        </Image>
+                        
+                        <xfx:XfxEntry HeightRequest="50"
+                                      x:Name="inputUsername"
+                                      Placeholder="Username"
+                                      PlaceholderColor="LightGray"
+                                      HorizontalOptions="FillAndExpand">
+                            <Entry.TextColor>
+                                <OnPlatform x:TypeArguments="Color" WinPhone="#f30100" Android="#0069c0" iOS="#0069c0"/>
+                            </Entry.TextColor>
+                        </xfx:XfxEntry>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Image IsVisible="True"
+                               WidthRequest="30"
+                               HeightRequest="30"
+                               x:Name="ic_password"
+                               HorizontalOptions="Start"
+                               Source="ic_password.png">
+                        </Image>
+                        
+                        <xfx:XfxEntry x:Name="inputPassword"
+                                      HeightRequest="50"
+                                      Placeholder="Password"
+                                      PlaceholderColor="LightGray"
+                                      IsPassword="True"
+                                      HorizontalOptions="FillAndExpand">
+                            <Entry.TextColor>
+                                <OnPlatform x:TypeArguments="Color" WinPhone="#f30100" Android="#0069c0" iOS="#0069c0"/>
+                            </Entry.TextColor>
+                        </xfx:XfxEntry>
+                        
+                        <Image IsVisible="True" 
+                               WidthRequest="30" 
+                               HeightRequest="30" 
+                               x:Name="ShowPassw"
+                               HorizontalOptions="End"
+                               Source ="shwpsswblue.png"/>
+                        
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                                    Tapped="TapGestureRecognizer_Tapped"/>
+                        </Image.GestureRecognizers>
+
+                    </StackLayout>
+                </StackLayout>
+
+                <Button x:Name="loginButton"
+                        Text="Entra"
+                        BorderRadius="25"
+                        WidthRequest="100"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="Center"                  
+                        Clicked="loginButton_Clicked"
+                        Style="{StaticResource buttonStyle}">
+                </Button>
+
+                <ActivityIndicator x:Name="caricamentoPagina"
+                                   Color="#2196f3"
+                                   IsVisible="False"/>
+
+                <StackLayout VerticalOptions="End" Padding="10">
+                    
+                    <Frame  HasShadow="True"
+                            CornerRadius="10"
+                            Margin="5"
+                            BackgroundColor="#0069c0">
+                        
+                        <StackLayout>
+                            
+                            <Label Text="News:" FontSize="Medium" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Start" VerticalOptions="StartAndExpand"/>
+                            
+                            <Label x:Name="lblNews" FontSize="Medium" TextColor="White" XAlign="Center"/>
+                            
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout VerticalOptions="EndAndExpand">
+
+                    <Image x:Name="ImmagineAK12Login"
+                           Source="ak12_senza_sfondo.png"
+                           WidthRequest="90"
+                           HeightRequest="50"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"/>
+
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

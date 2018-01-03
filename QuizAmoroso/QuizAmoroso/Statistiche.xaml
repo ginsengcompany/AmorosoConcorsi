@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             x:Class="QuizAmoroso.Statistiche"
+             NavigationPage.HasNavigationBar="False"
+             Title = "Statistiche" 
+             Icon="ic_trending_up"
+             BackgroundColor="White">
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    iOS="0,20,0,0"/>
+    </ContentPage.Padding>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" x:Name="stackwebview"  >
+                <WebView x:Name="Browser" 
+                         IsVisible="True"  
+                         WidthRequest="700" 
+                         HeightRequest="950" 
+                         />
+        </StackLayout>
+            <StackLayout BackgroundColor="#2196f3"
+                VerticalOptions="Center">
+            </StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand"></StackLayout>
+            <StackLayout VerticalOptions="End">
+                <StackLayout.IsVisible>
+                    <OnPlatform x:TypeArguments="x:Boolean" WinPhone="true" Android="true" iOS="false"/>
+                </StackLayout.IsVisible>
+                <StackLayout HorizontalOptions="StartAndExpand"></StackLayout>
+                <Frame>
+                    <Frame.BackgroundColor>
+                        <OnPlatform x:TypeArguments="Color" WinPhone="White" Android="#2196f3" iOS="#2196f3"/>
+                    </Frame.BackgroundColor>
+                    <StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Powered by " 
+                                   YAlign="End"
+                                   FontAttributes="Italic">
+                                <Label.TextColor>
+                                    <OnPlatform x:TypeArguments="Color" WinPhone="#f30100" Android="White" iOS="White"/>
+                                </Label.TextColor>
+                            </Label>
+                            <Image x:Name="logoFooter"
+                                   Source="cerchietto_ak12.png" 
+                                   HeightRequest="25"></Image>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

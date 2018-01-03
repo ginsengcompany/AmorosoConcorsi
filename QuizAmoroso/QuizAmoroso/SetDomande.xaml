@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuizAmoroso.SetDomande"
+             NavigationPage.HasNavigationBar="True"
+             Title="Set di domande disponibili">
+
+    <ContentPage.BackgroundColor>
+        <OnPlatform x:TypeArguments="Color" WinPhone="White" Android="White" iOS="LightCyan"/>
+    </ContentPage.BackgroundColor>
+    
+    <ContentPage.Content>
+            <StackLayout x:Name="StackSetDomande">
+
+            <StackLayout x:Name="StackActivityIndicator">
+                <ActivityIndicator x:Name="caricamentoPagina"
+                               Color="#2196f3" HorizontalOptions="Center">
+                </ActivityIndicator>
+            </StackLayout>
+                
+            <StackLayout HorizontalOptions="FillAndExpand">
+                    <ListView x:Name="lstCategorie"
+                      CachingStrategy="RecycleElement"
+                      RowHeight="100"
+                      ItemTapped="lstCategorie_ItemTapped">
+
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Frame  BackgroundColor="#0069c0" HasShadow="True" CornerRadius="10" WidthRequest="300" Margin="4">
+                                        <StackLayout Orientation="Vertical">
+
+                                            <Label Text="{Binding nome_set}"
+                                           FontAttributes="Bold"
+                                           TextColor="White"
+                                           YAlign="Start"
+                                           XAlign="Center"
+                                           HorizontalTextAlignment="Center"/>
+
+                                            <Label Text="{Binding Descrizione}"
+                                           HorizontalTextAlignment="Center"
+                                           YAlign="End"
+                                           XAlign="Center"
+                                           TextColor="LightCyan"/>
+
+
+                                        </StackLayout>
+                                    </Frame>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+
+            </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

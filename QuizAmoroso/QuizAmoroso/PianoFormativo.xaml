@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuizAmoroso.PianoFormativo" 
+             Title = "Piani Formativi" Icon="ic_library_books"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.BackgroundColor>
+        <OnPlatform x:TypeArguments="Color" WinPhone="White" Android="White" iOS="LightCyan"/>
+    </ContentPage.BackgroundColor>
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    iOS="0,30,0,0"/>
+    </ContentPage.Padding>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <StackLayout VerticalOptions="Center" HorizontalOptions="Center" x:Name="DisabilitaLayoutActivityIndicator">
+                <ActivityIndicator x:Name="caricamentoPagina"
+                                   Color="#2196f3" 
+                                   HorizontalOptions="Center">
+                </ActivityIndicator>
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="FillAndExpand">
+                <ListView x:Name="lstConcorsi"
+                          CachingStrategy="RecycleElement"
+                          RowHeight="90" 
+                          SeparatorColor="White"
+                          IsVisible="False"
+                          ItemTapped="lstConcorsi_ItemTapped">
+                    
+                    <ListView.BackgroundColor>
+                        <OnPlatform x:TypeArguments="Color" iOS="LightCyan"/>
+                    </ListView.BackgroundColor>
+                    
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame BackgroundColor="#0069c0" 
+                                       HasShadow="True" 
+                                       CornerRadius="10" 
+                                       WidthRequest="300" 
+                                       Margin="5">
+                                    <StackLayout Orientation="Vertical">
+                                        <Label Text="{Binding Corpo}"
+                                               TextColor="White"
+                                               FontAttributes="Bold"
+                                               HorizontalTextAlignment="Center"
+                                               HorizontalOptions="Center"
+                                               YAlign="Start"
+                                               XAlign="Center"/>
+
+                                        <Label Text="{Binding nome_piano}"
+                                               TextColor="LightCyan"
+                                               HorizontalTextAlignment="Center"
+                                               HorizontalOptions="Center"
+                                               XAlign="Center"
+                                               YAlign="End"/>
+                                    </StackLayout>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+
+            <StackLayout VerticalOptions="CenterAndExpand"></StackLayout>
+
+            <StackLayout VerticalOptions="End">
+                <StackLayout.IsVisible>
+                    <OnPlatform x:TypeArguments="x:Boolean"
+                                 WinPhone="true" Android="true" iOS="false"/>
+                </StackLayout.IsVisible>
+                <StackLayout HorizontalOptions="StartAndExpand"></StackLayout>
+                <Frame>
+                    <Frame.BackgroundColor>
+                        <OnPlatform x:TypeArguments="Color" WinPhone="White" Android="#2196f3" iOS="#2196f3"/>
+                    </Frame.BackgroundColor>
+                    <StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Powered by " 
+                                   YAlign="End"
+                                   FontAttributes="Italic">
+                                <Label.TextColor>
+                                    <OnPlatform x:TypeArguments="Color" WinPhone="Black" Android="White" iOS="#f30100"/>
+                                </Label.TextColor>
+                            </Label>
+                            <Image x:Name="logoFooter"
+                                Source="cerchietto_ak12.png" 
+                                HeightRequest="25"></Image>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+

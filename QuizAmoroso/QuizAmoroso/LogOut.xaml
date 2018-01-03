@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuizAmoroso.LogOut"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="LogoAmorosoSenzaSfondo.png" 
+                            WidthRequest="350" 
+                            HeightRequest="250"
+                            x:Name="ImmagineLogo"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

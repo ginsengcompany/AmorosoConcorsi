@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:me="clr-namespace:QuizAmoroso"
+            x:Class="QuizAmoroso.MainPage"
+            NavigationPage.HasNavigationBar="False"
+            NavigationPage.HasBackButton="False">
+    <!--Pages can be added as references or inline-->
+    <TabbedPage.Children>
+        <me:Info NavigationPage.HasNavigationBar="False"></me:Info>
+        <me:PianoFormativo NavigationPage.HasNavigationBar="False"></me:PianoFormativo>
+        <me:QuizVeloce NavigationPage.HasNavigationBar="False"></me:QuizVeloce>
+        <me:Historyquiz NavigationPage.HasNavigationBar="False"></me:Historyquiz>
+        <me:Statistiche NavigationPage.HasNavigationBar="False"></me:Statistiche>
+       
+    </TabbedPage.Children>
+</TabbedPage>
