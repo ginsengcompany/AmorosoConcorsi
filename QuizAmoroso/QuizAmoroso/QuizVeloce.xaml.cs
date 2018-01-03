@@ -485,64 +485,24 @@ namespace QuizAmoroso
                     {
                         if (numeroDomandeQuizVeloceSelezionato <= differenza)
                         {
-                            switch (Device.RuntimePlatform)
-                            {
-                                case Device.iOS:
-                                    await Navigation.PushAsync(new NuovaModalitaQuizVeloceNew(modalitaSelezionata));
-                                    //await Navigation.PushAsync(new NuovaModalitàQuizVeloceIOS(modalitaSelezionata));
-                                    break;
-                                default:
-                                    //await Navigation.PushAsync(new NuovaModalitàQuizVeloceCasuale(modalitaSelezionata));
-                                    await Navigation.PushAsync(new NuovaModalitaQuizVeloceNew(modalitaSelezionata));
-                                    break;
-                            }
+                            await Navigation.PushAsync(new NuovaModalitaQuizVeloceNew(modalitaSelezionata));
                         }
                         else
                         {
                             numeroDomandeQuizVeloceSelezionato = differenza;
-                            switch (Device.RuntimePlatform)
-                            {
-                                case Device.iOS:
-                                    await Navigation.PushAsync(new NuovaModalitaQuizVeloceNew(modalitaSelezionata));
-                                    //await Navigation.PushAsync(new NuovaModalitàQuizVeloceIOS(modalitaSelezionata));
-                                    break;
-                                default:
-                                    //await Navigation.PushAsync(new NuovaModalitàQuizVeloceCasuale(modalitaSelezionata));
-                                    await Navigation.PushAsync(new NuovaModalitaQuizVeloceNew(modalitaSelezionata));
-                                    break;
-                            }
+                            await Navigation.PushAsync(new NuovaModalitaQuizVeloceNew(modalitaSelezionata));
                         }
                     }
                     else
                     {
                         if (numeroDomandeMassimoDelTestQuizVeloce <= differenza)
                         {
-                            switch (Device.RuntimePlatform)
-                            {
-                                case Device.iOS:
-                                    await Navigation.PushAsync(new NuovaModalitaQuizVeloceNew(modalitaSelezionata));
-                                    //await Navigation.PushAsync(new NuovaModalitàQuizVeloceIOS(modalitaSelezionata));
-                                    break;
-                                default:
-                                    //await Navigation.PushAsync(new NuovaModalitàQuizVeloceCasuale(modalitaSelezionata));
-                                    await Navigation.PushAsync(new NuovaModalitaQuizVeloceNew(modalitaSelezionata));
-                                    break;
-                            }
+                            await Navigation.PushAsync(new NuovaModalitaQuizVeloceNew(modalitaSelezionata));
                         }
                         else
                         {
                             numeroDomandeMassimoDelTestQuizVeloce = differenza;
-                            switch (Device.RuntimePlatform)
-                            {
-                                case Device.iOS:
-                                    await Navigation.PushAsync(new NuovaModalitaQuizVeloceNew(modalitaSelezionata));
-                                    //await Navigation.PushAsync(new NuovaModalitàQuizVeloceIOS(modalitaSelezionata));
-                                    break;
-                                default:
-                                    //await Navigation.PushAsync(new NuovaModalitàQuizVeloceCasuale(modalitaSelezionata));
-                                    await Navigation.PushAsync(new NuovaModalitaQuizVeloceNew(modalitaSelezionata));
-                                    break;
-                            }
+                            await Navigation.PushAsync(new NuovaModalitaQuizVeloceNew(modalitaSelezionata));
                         }
                     }
                 }

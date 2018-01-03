@@ -38,9 +38,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Apprendimento.xaml.cs">
-      <DependentUpon>Apprendimento.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ApprendimentoNew.xaml.cs">
       <DependentUpon>ApprendimentoNew.xaml</DependentUpon>
     </Compile>
@@ -69,20 +66,11 @@
     </Compile>
     <Compile Include="Model\ShuffleList.cs" />
     <Compile Include="Model\Timer.cs" />
-    <Compile Include="NuovaModalitaQuizVeloceIOS.xaml.cs">
-      <DependentUpon>NuovaModalitaQuizVeloceIOS.xaml</DependentUpon>
-    </Compile>
     <Compile Include="NuovaModalitaQuizVeloceNew.xaml.cs">
       <DependentUpon>NuovaModalitaQuizVeloceNew.xaml</DependentUpon>
     </Compile>
-    <Compile Include="NuovaModalitàQuizVeloce.xaml.cs">
-      <DependentUpon>NuovaModalitàQuizVeloce.xaml</DependentUpon>
-    </Compile>
     <Compile Include="SimulazioneAssistitaNew.xaml.cs">
       <DependentUpon>SimulazioneAssistitaNew.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="SimulazioneIOS.xaml.cs">
-      <DependentUpon>SimulazioneIOS.xaml</DependentUpon>
     </Compile>
     <Compile Include="PianoFormativo.xaml.cs">
       <DependentUpon>PianoFormativo.xaml</DependentUpon>
@@ -95,12 +83,6 @@
     </Compile>
     <Compile Include="RisultatoSimulazione.xaml.cs">
       <DependentUpon>RisultatoSimulazione.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Simulazione.xaml.cs">
-      <DependentUpon>Simulazione.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Dispensa.xaml.cs">
-      <DependentUpon>Dispensa.xaml</DependentUpon>
     </Compile>
     <Compile Include="Info.xaml.cs">
       <DependentUpon>Info.xaml</DependentUpon>
@@ -118,9 +100,6 @@
       <DependentUpon>ModalitaQuiz.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SimulazioneAssistita.xaml.cs">
-      <DependentUpon>SimulazioneAssistita.xaml</DependentUpon>
-    </Compile>
     <Compile Include="SimulazioneNew.xaml.cs">
       <DependentUpon>SimulazioneNew.xaml</DependentUpon>
     </Compile>
@@ -232,31 +211,13 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Dispensa.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="ModalitaQuiz.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Simulazione.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="LogOut.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="SimulazioneAssistita.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -280,19 +241,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Apprendimento.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="DettagliTest.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="NuovaModalitàQuizVeloce.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -311,18 +260,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="HistoryDomande.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="SimulazioneIOS.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="NuovaModalitaQuizVeloceIOS.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
