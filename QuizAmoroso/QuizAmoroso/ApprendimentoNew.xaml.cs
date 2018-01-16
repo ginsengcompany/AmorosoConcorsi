@@ -70,7 +70,7 @@ namespace QuizAmoroso
             {
                 var values = new List<KeyValuePair<string, string>>();
                 values.Add(new KeyValuePair<string, string>("username", Utente.Instance.getUserName));
-                values.Add(new KeyValuePair<string, string>("tempoSimulazione", timer.tempoTotaleSimulazione));
+                values.Add(new KeyValuePair<string, string>("tempoApprendimento", timer.tempoTotaleApprendimento));
                 var content = new FormUrlEncodedContent(values);
                 var result = await client.PostAsync(Costanti.invioTempiGlobali, content);
             }

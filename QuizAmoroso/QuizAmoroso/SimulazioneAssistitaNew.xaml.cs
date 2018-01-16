@@ -71,6 +71,7 @@ namespace QuizAmoroso
             CaricamentoPaginaSimulazioneAssistita.IsRunning = false;
             CaricamentoPaginaSimulazioneAssistita.IsVisible = false;
             avvioQuiz.IsVisible = true;
+            timer.TempoSimulazioneAssistita(true);
         }
 
         public async Task ConnessioneDomande()
@@ -382,7 +383,7 @@ namespace QuizAmoroso
             {
                 var values = new List<KeyValuePair<string, string>>();
                 values.Add(new KeyValuePair<string, string>("username", Utente.Instance.getUserName));
-                values.Add(new KeyValuePair<string, string>("tempoSimulazione", timer.tempoTotaleSimulazione));
+                values.Add(new KeyValuePair<string, string>("tempoSimulazioneAssistita", timer.tempoTotaleSimulazioneAssistita));
                 var content = new FormUrlEncodedContent(values);
                 var result = await client.PostAsync(Costanti.invioTempiGlobali, content);
             }
