@@ -43,6 +43,7 @@ namespace QuizAmoroso
         bool fermaAvviaTempoGlobale = true;
         string urlRisorsa = "";
         public Timer timer = new Timer();
+        private Dictionary<string, string> lista = new Dictionary<string, string>();
 
         public SimulazioneNew()
         {
@@ -374,8 +375,9 @@ namespace QuizAmoroso
             TempoRestartDomanda();
             string lettera = "A";
             int cont = 0;
-            Dictionary<string, string> lista = new Dictionary<string, string>();
-            foreach(var el in recordCampiDomandaRisposte.Quesiti)
+            lista.Clear();
+           // Dictionary<string, string> lista = new Dictionary<string, string>();
+            foreach (var el in recordCampiDomandaRisposte.Quesiti)
             {
                 lista.Add(lettera, el);
                 cont++;
