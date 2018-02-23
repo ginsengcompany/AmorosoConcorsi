@@ -95,6 +95,16 @@ namespace QuizAmoroso
                     struttura = JsonConvert.DeserializeObject<List<Domande>>(resultcontent);
                     numeroTotaleDelSetDiDomande = struttura.Count;
                     RisultatoSimulazione.conteggioDomandeSvoltePerSimulazione = numeroTotaleDelSetDiDomande;
+                    foreach(var i in struttura)
+                    { if(i.urlVideo!= null)
+                        {
+                            btnVideo.IsVisible = true;
+                        }
+                    else
+                    {
+                        btnVideo.IsVisible = false;
+                    }
+                    }
                     DomandaSuccessiva();
                 }
             }
@@ -395,7 +405,7 @@ namespace QuizAmoroso
 
         private void BtnVideo_OnClicked(object sender, EventArgs e)
         {
-            DisplayAlert("Attenzione", "video di min interno", "ok");
+            Navigation.PushAsync(new VideoLezioni("videodelcazzo"));
         }
     }
 }
