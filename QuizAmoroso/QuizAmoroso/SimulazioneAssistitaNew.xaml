@@ -38,6 +38,17 @@
                             </Label>
 
                             <StackLayout HorizontalOptions="EndAndExpand">
+                                <Button
+                                    x:Name="btnVideo"
+                                    BackgroundColor="#0069c0"
+                                    HorizontalOptions="End"
+                                    Text="Video"
+                                    FontSize="Small"
+                                    TextColor="White"
+                                    IsEnabled="False"
+                                    IsVisible="True"
+                                    Clicked="BtnVideo_OnClicked"
+                                    ></Button>
                                 <Button x:Name="btn_ApriPDF"
                                         BackgroundColor="#0069c0"
                                         HorizontalOptions="End"
@@ -49,11 +60,9 @@
                                         Clicked="btn_ApriPDF_Clicked">
                                 </Button>
                             </StackLayout>
-
                         </StackLayout>
                     </Frame>
                 </StackLayout>
-
                 <StackLayout VerticalOptions="Start">
                     <Frame x:Name="frameDomanda"
                            IsVisible="False"
