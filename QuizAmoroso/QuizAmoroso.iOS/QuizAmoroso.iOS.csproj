@@ -47,7 +47,7 @@
     <MtouchSdkVersion>11.1</MtouchSdkVersion>
     <MtouchFloat32>false</MtouchFloat32>
     <MtouchEnableSGenConc>false</MtouchEnableSGenConc>
-    <CodesignKey>iPhone Developer: Pasquale Russo (BY955K9SHU)</CodesignKey>
+    <CodesignKey>iPhone Developer: Maurizio Fucile (W5GJS3NBU5)</CodesignKey>
     <CodesignProvision>VS: it.gesan.QuizAmoroso Development</CodesignProvision>
     <OptimizePNGs>true</OptimizePNGs>
   </PropertyGroup>
@@ -63,7 +63,7 @@
     <MtouchSdkVersion>11.1</MtouchSdkVersion>
     <OptimizePNGs>true</OptimizePNGs>
     <MtouchUseLlvm>true</MtouchUseLlvm>
-    <CodesignKey>iPhone Developer: Pasquale Russo (BY955K9SHU)</CodesignKey>
+    <CodesignKey>iPhone Developer: Maurizio Fucile (W5GJS3NBU5)</CodesignKey>
     <CodesignProvision>VS: it.gesan.QuizAmoroso Development</CodesignProvision>
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
   </PropertyGroup>
@@ -77,7 +77,7 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchArch>ARMv7, ARMv7s, ARM64</MtouchArch>
-    <CodesignKey>iPhone Developer: Pasquale Russo (BY955K9SHU)</CodesignKey>
+    <CodesignKey>iPhone Developer: Maurizio Fucile (W5GJS3NBU5)</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchSdkVersion>11.1</MtouchSdkVersion>
@@ -94,7 +94,7 @@
     <WarningLevel>4</WarningLevel>
     <MtouchArch>ARM64</MtouchArch>
     <ConsolePause>false</ConsolePause>
-    <CodesignKey>iPhone Developer: Pasquale Russo (BY955K9SHU)</CodesignKey>
+    <CodesignKey>iPhone Distribution: Maurizio Fucile (E3G3DWMZU6)</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <BuildIpa>true</BuildIpa>
     <IpaIncludeArtwork>false</IpaIncludeArtwork>
@@ -104,7 +104,7 @@
     <MtouchUseThumb>true</MtouchUseThumb>
     <MtouchUseLlvm>true</MtouchUseLlvm>
     <OptimizePNGs>true</OptimizePNGs>
-    <CodesignProvision>VS: it.gesan.QuizAmoroso Development</CodesignProvision>
+    <CodesignProvision>QuizAmoroso</CodesignProvision>
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
     <DeviceSpecificBuild>false</DeviceSpecificBuild>
   </PropertyGroup>
@@ -118,7 +118,7 @@
     <MtouchArch>ARM64</MtouchArch>
     <BuildIpa>true</BuildIpa>
     <CodesignProvision>VS: it.gesan.QuizAmoroso Development</CodesignProvision>
-    <CodesignKey>iPhone Developer: Pasquale Russo (BY955K9SHU)</CodesignKey>
+    <CodesignKey>iPhone Developer: Maurizio Fucile (W5GJS3NBU5)</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchFloat32>false</MtouchFloat32>
     <MtouchSdkVersion>11.1</MtouchSdkVersion>
@@ -136,13 +136,15 @@
     <ConsolePause>False</ConsolePause>
     <MtouchArch>ARM64</MtouchArch>
     <CodesignProvision>VS: it.gesan.QuizAmoroso Development</CodesignProvision>
-    <CodesignKey>iPhone Developer: Pasquale Russo (BY955K9SHU)</CodesignKey>
+    <CodesignKey>iPhone Developer: Maurizio Fucile (W5GJS3NBU5)</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <OptimizePNGs>false</OptimizePNGs>
     <MtouchSdkVersion>
     </MtouchSdkVersion>
-    <MtouchLink>Full</MtouchLink>
+    <MtouchLink>SdkOnly</MtouchLink>
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
+    <BuildIpa>true</BuildIpa>
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
@@ -188,9 +190,6 @@
     </Reference>
     <Reference Include="Plugin.Connectivity.Abstractions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xam.Plugin.Connectivity.3.0.3\lib\Xamarin.iOS10\Plugin.Connectivity.Abstractions.dll</HintPath>
-    </Reference>
-    <Reference Include="Plugin.DeviceInfo, Version=3.0.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xam.Plugin.DeviceInfo.3.0.2\lib\Xamarin.iOS10\Plugin.DeviceInfo.dll</HintPath>
     </Reference>
     <Reference Include="Plugin.DeviceInfo.Abstractions, Version=3.0.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xam.Plugin.DeviceInfo.3.0.2\lib\Xamarin.iOS10\Plugin.DeviceInfo.Abstractions.dll</HintPath>
@@ -239,6 +238,9 @@
     </Reference>
     <Reference Include="Xfx.Controls.iOS, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xfx.Controls.1.1.2\lib\Xamarin.iOS10\Xfx.Controls.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.DeviceInfo, Version=3.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugin.DeviceInfo.3.0.2\lib\Xamarin.iOS10\Plugin.DeviceInfo.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

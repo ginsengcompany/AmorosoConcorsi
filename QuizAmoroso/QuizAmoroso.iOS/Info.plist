@@ -25,7 +25,7 @@
 	<key>CFBundleIdentifier</key>
 	<string>it.gesan.QuizAmoroso</string>
 	<key>CFBundleVersion</key>
-	<string>1.0.5</string>
+	<string>1.0.7</string>
 	<key>UIMainStoryboardFile~iphone</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile~ipad</key>
@@ -47,8 +47,6 @@
 			<string>Tipo di URL 1</string>
 		</dict>
 	</array>
-	<key>CFBundleShortVersionString</key>
-	<string>6</string>
 	<key>XSAppIconAssets</key>
 	<string>Resources/Elementi multimediali.xcassets/Icone app.appiconset</string>
 	<key>XSLaunchImageAssets</key>
@@ -57,5 +55,7 @@
 	<string>9.3</string>
 	<key>CFBundleName</key>
 	<string>Amoroso Concorsi</string>
+	<key>CFBundleShortVersionString</key>
+	<string>8</string>
 </dict>
 </plist>
