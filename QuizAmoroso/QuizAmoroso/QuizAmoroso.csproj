@@ -49,12 +49,23 @@
     <Compile Include="DataModel\DatiSetDomande.cs" />
     <Compile Include="DataModel\RisultatoDomande.cs" />
     <Compile Include="DataModel\Sessioni.cs" />
+    <Compile Include="DataModel\VideoInfo.cs" />
     <Compile Include="DettagliTest.xaml.cs">
       <DependentUpon>DettagliTest.xaml</DependentUpon>
     </Compile>
     <Compile Include="DispensaNew.xaml.cs">
       <DependentUpon>DispensaNew.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FormsVideoLibrary\FileVideoSource.cs" />
+    <Compile Include="FormsVideoLibrary\IVideoPicker.cs" />
+    <Compile Include="FormsVideoLibrary\IVideoPlayerController.cs" />
+    <Compile Include="FormsVideoLibrary\PositionSlider.cs" />
+    <Compile Include="FormsVideoLibrary\ResourceVideoSource.cs" />
+    <Compile Include="FormsVideoLibrary\UriVideoSource.cs" />
+    <Compile Include="FormsVideoLibrary\VideoPlayer.cs" />
+    <Compile Include="FormsVideoLibrary\VideoSource.cs" />
+    <Compile Include="FormsVideoLibrary\VideoSourceConverter.cs" />
+    <Compile Include="FormsVideoLibrary\VideoStatus.cs" />
     <Compile Include="HistoryDomande.xaml.cs">
       <DependentUpon>HistoryDomande.xaml</DependentUpon>
     </Compile>
@@ -108,6 +119,9 @@
     </Compile>
     <Compile Include="DataModel\Utente.cs" />
     <Compile Include="DataModel\StrutturaHistory.cs" />
+    <Compile Include="VideoLezioni.xaml.cs">
+      <DependentUpon>VideoLezioni.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
@@ -290,6 +304,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DispensaNew.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="VideoLezioni.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
