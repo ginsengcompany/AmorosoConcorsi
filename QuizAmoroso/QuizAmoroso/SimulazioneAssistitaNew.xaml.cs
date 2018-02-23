@@ -392,5 +392,10 @@ namespace QuizAmoroso
                 Debug.WriteLine(ex.Message);
             }
         }
+
+        private void BtnVideo_OnClicked(object sender, EventArgs e)
+        {
+            DisplayAlert("Attenzione", "video di min interno", "ok");
+        }
     }
 }
