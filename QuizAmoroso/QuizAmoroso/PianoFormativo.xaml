@@ -19,7 +19,7 @@
             
             <StackLayout VerticalOptions="Center" HorizontalOptions="Center" x:Name="DisabilitaLayoutActivityIndicator">
                 <ActivityIndicator x:Name="caricamentoPagina"
-                                   Color="#2196f3" 
+                                   Color="#0069c0" 
                                    HorizontalOptions="Center">
                 </ActivityIndicator>
             </StackLayout>
@@ -38,8 +38,8 @@
                     
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <ViewCell>
-                                <Frame BackgroundColor="#0069c0" 
+                            <ViewCell><!--0069c0 -->
+                                <Frame BackgroundColor="#275B8C"  
                                        HasShadow="True" 
                                        CornerRadius="10" 
                                        WidthRequest="300" 
@@ -77,7 +77,7 @@
                 <StackLayout HorizontalOptions="StartAndExpand"></StackLayout>
                 <Frame>
                     <Frame.BackgroundColor>
-                        <OnPlatform x:TypeArguments="Color" WinPhone="White" Android="#2196f3" iOS="#2196f3"/>
+                        <OnPlatform x:TypeArguments="Color" WinPhone="White" Android="#1C4164" iOS="#1C4164"/>
                     </Frame.BackgroundColor>
                     <StackLayout>
                         <StackLayout Orientation="Horizontal">

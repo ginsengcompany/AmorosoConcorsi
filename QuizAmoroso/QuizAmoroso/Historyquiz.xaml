@@ -35,7 +35,7 @@
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <Frame BackgroundColor="#0069c0" 
+                                <Frame BackgroundColor="#275B8C" 
                                        HasShadow="True" 
                                        CornerRadius="10" 
                                        WidthRequest="300" 

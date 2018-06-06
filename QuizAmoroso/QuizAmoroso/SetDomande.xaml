@@ -14,7 +14,7 @@
 
             <StackLayout x:Name="StackActivityIndicator">
                 <ActivityIndicator x:Name="caricamentoPagina"
-                               Color="#2196f3" HorizontalOptions="Center">
+                               Color="#0069c0" HorizontalOptions="Center">
                 </ActivityIndicator>
             </StackLayout>
                 
@@ -27,7 +27,7 @@
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
-                                    <Frame  BackgroundColor="#0069c0" HasShadow="True" CornerRadius="10" WidthRequest="300" Margin="4">
+                                <Frame  BackgroundColor="#275B8C" HasShadow="True" CornerRadius="10" WidthRequest="300" Margin="4">
                                         <StackLayout Orientation="Vertical">
 
                                             <Label Text="{Binding nome_set}"

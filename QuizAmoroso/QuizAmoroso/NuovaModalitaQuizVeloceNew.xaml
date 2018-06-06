@@ -19,7 +19,7 @@
                 <StackLayout VerticalOptions="Start" x:Name="LayoutPrincipalePaginaQuizVeloceCasuale">
                     <Frame>
                         <Frame.BackgroundColor>
-                            <OnPlatform x:TypeArguments="Color" WinPhone="White" Android="#2196f3" iOS="#2196f3"/>
+                            <OnPlatform x:TypeArguments="Color" WinPhone="White" Android="#1C4164" iOS="#1C4164"/>
                         </Frame.BackgroundColor>
                         <StackLayout>
                             <StackLayout Orientation="Horizontal">
@@ -102,13 +102,14 @@
                     <ActivityIndicator x:Name="CaricamentoPaginaQuizVeloceCasuale"
                                        HorizontalOptions="Center"
                                        VerticalOptions="Center"
-                                       Color="#2196f3"/>
+                                       Color="#0069c0"/>
                 </StackLayout>
 
                 <RelativeLayout x:Name="RelativeBottoneAvvio">
                     <Button x:Name="avvioQuiz"
                             Clicked="avvioQuiz_Clicked"
                             Text="Avvia"
+                            TextColor="White"
                             FontSize="30" 
                             Style="{StaticResource buttonStyle}"
                             RelativeLayout.XConstraint="
@@ -146,7 +147,7 @@
                     <StackLayout HorizontalOptions="StartAndExpand"></StackLayout>
                     <Frame>
                         <Frame.BackgroundColor>
-                            <OnPlatform x:TypeArguments="Color" WinPhone="White" Android="#2196f3" iOS="#2196f3"/>
+                            <OnPlatform x:TypeArguments="Color" WinPhone="White" Android="#1C4164" iOS="#1C4164"/>
                         </Frame.BackgroundColor>
                         <StackLayout Orientation="Horizontal">
                             <Label x:Name="ContatoreDomande"

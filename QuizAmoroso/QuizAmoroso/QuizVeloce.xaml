@@ -25,7 +25,7 @@
                            TextColor="#0069c0"/>
                     <Picker x:Name="picker_selezioneConcorso" 
                             Title="Seleziona Concorso"
-                            TextColor="#6ec6ff"
+                            TextColor="#1C4164"
                             SelectedIndexChanged="picker_selezioneConcorso_SelectedIndexChanged">
                     </Picker>
 
@@ -35,7 +35,7 @@
                            IsVisible="False"/>
                     <Picker x:Name="picker_selezioneMateria"
                             Title="Seleziona Materia"
-                            TextColor="#6ec6ff"
+                            TextColor="#1C4164"
                             SelectedIndexChanged="picker_selezioneMateria_SelectedIndexChanged"
                             IsVisible="False">
                     </Picker>
@@ -46,7 +46,7 @@
                            IsVisible="False"/>
                     <Picker x:Name="picker_selezioneModalita" 
                             Title="Seleziona Modalità" 
-                            TextColor="#6ec6ff"
+                            TextColor="#1C4164"
                             SelectedIndexChanged="picker_selezioneModalita_SelectedIndexChanged"
                             IsVisible="False">
                     </Picker>
@@ -54,14 +54,14 @@
                     <StackLayout x:Name="StackBottom" Orientation="Vertical" >
 
                         <ActivityIndicator x:Name="caricamentoPagina"
-                               Color="#2196f3" HorizontalOptions="Center">
+                               Color="#0069c0" HorizontalOptions="Center">
                         </ActivityIndicator> 
 
                         <StackLayout Orientation="Horizontal" >
                             <Label x:Name="LabelNumeroPartenza" 
                                    Text="Inserisci il numero di partenza delle domande"
                                    VerticalOptions="Center"
-                                   TextColor="#2196f3"
+                                   TextColor="#0069c0"
                                    IsVisible="False">
                             </Label>
                             <xfx:XfxEntry 
@@ -70,7 +70,7 @@
                                 VerticalOptions="Center"
                                 Placeholder="Inserisci"
                                 PlaceholderColor="LightGray"
-                                TextColor="#6ec6ff"
+                                TextColor="#1C4164"
                                 HorizontalTextAlignment="Center"
                                 WidthRequest="80" 
                                 Keyboard="Numeric" >
@@ -81,7 +81,7 @@
                             <Label x:Name="LabelAttivaSwitchSelezioneDomande"
                                    Text="Selezionare il numero di domande manualmente?" 
                                    FontAttributes="Italic"
-                                   TextColor="#2196f3"
+                                   TextColor="#0069c0"
                                    IsVisible="False">
                             </Label>
                             <Switch x:Name="AttivaSelezioneManualeNumeroDomande"
@@ -93,7 +93,7 @@
                         <Label x:Name="LabelSliderNumeroDomande"
                                Text="Seleziona il numero di domande:"
                                IsVisible="False"
-                               TextColor="#2196f3"
+                               TextColor="#0069c0"
                                FontSize="Medium">
                         </Label>
 
@@ -105,27 +105,27 @@
                             <StackLayout Orientation="Horizontal">
                                 <Label x:Name="LabelMinimoSlider"
                                        IsVisible="False"
-                                       TextColor="#2196f3"
+                                       TextColor="#0069c0"
                                        XAlign="Start">
                                 </Label>
                                 <StackLayout HorizontalOptions="CenterAndExpand"></StackLayout>
                                 <Label x:Name="LabelMassimoSlider"
                                        IsVisible="False"
                                        XAlign="End"
-                                       TextColor="#2196f3">
+                                       TextColor="#0069c0">
                                 </Label>
                             </StackLayout>
 
                             <Label x:Name="LabelValoriSelezionatiConSlider"
                                    HorizontalOptions="Center"
                                    IsVisible="False"
-                                   TextColor="#2196f3">
+                                   TextColor="#0069c0">
                             </Label>
                         </StackLayout>
                         <Button x:Name="buttonQuizVeloce" 
                                 Clicked="buttonQuizVeloce_Clicked" 
                                 IsVisible="False" Text="Avvia" 
-                                BackgroundColor="#2196f3" 
+                                BackgroundColor="#275B8C" 
                                 TextColor="White">
                         </Button>
                     </StackLayout>
@@ -140,7 +140,7 @@
                     <StackLayout HorizontalOptions="StartAndExpand"></StackLayout>
                     <Frame>
                         <Frame.BackgroundColor>
-                            <OnPlatform x:TypeArguments="Color" WinPhone="White" Android="#2196f3" iOS="#2196f3"/>
+                            <OnPlatform x:TypeArguments="Color" WinPhone="White" Android="#1C4164" iOS="#1C4164"/>
                         </Frame.BackgroundColor>
                         <StackLayout>
                             <StackLayout Orientation="Horizontal">

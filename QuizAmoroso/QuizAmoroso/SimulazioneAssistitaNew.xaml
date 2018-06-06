@@ -14,7 +14,7 @@
                 <StackLayout VerticalOptions="Start">
                     <Frame>
                         <Frame.BackgroundColor>
-                            <OnPlatform x:TypeArguments="Color" WinPhone="White" Android="#2196f3" iOS="#2196f3"/>
+                            <OnPlatform x:TypeArguments="Color" WinPhone="White" Android="#1C4164" iOS="#1C4164"/>
                         </Frame.BackgroundColor>
 
                         <StackLayout Orientation="Horizontal">
@@ -92,7 +92,7 @@
                     <ActivityIndicator x:Name="CaricamentoPaginaSimulazioneAssistita"
                                        HorizontalOptions="Center"
                                        VerticalOptions="Center"
-                                       Color="#2196f3"/>
+                                       Color="#0069c0"/>
                 </StackLayout>
 
                 <RelativeLayout x:Name="RelativeBottoneAvvio">
@@ -152,7 +152,7 @@
                     <StackLayout HorizontalOptions="StartAndExpand"></StackLayout>
                     <Frame>
                         <Frame.BackgroundColor>
-                            <OnPlatform x:TypeArguments="Color" WinPhone="White" Android="#2196f3" iOS="#2196f3"/>
+                            <OnPlatform x:TypeArguments="Color" WinPhone="White" Android="#1C4164" iOS="#1C4164"/>
                         </Frame.BackgroundColor>
                         <StackLayout Orientation="Horizontal">
                             <Label x:Name="ContatoreDomande"

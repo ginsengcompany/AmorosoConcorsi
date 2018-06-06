@@ -16,7 +16,7 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                <StackLayout BackgroundColor="#2196f3">
+                <StackLayout BackgroundColor="#1C4164">
                     <StackLayout  HorizontalOptions="StartAndExpand" >
                         
                         <StackLayout Orientation="Horizontal">
@@ -50,8 +50,8 @@
                         
                     </StackLayout>
                 </StackLayout>
-                
-                <Label HorizontalOptions="Center" FontSize="Large" FontAttributes="Bold" FormattedText="INFO:"></Label>
+
+                <Label HorizontalOptions="Center" FontSize="Large" FontAttributes="Bold" TextColor="#275B8C" FormattedText="INFO:"></Label>
                 <StackLayout Padding="10" VerticalOptions="CenterAndExpand">
                     <Grid ColumnSpacing="15" RowSpacing="15" HorizontalOptions="FillAndExpand">
                         <Grid.RowDefinitions >
@@ -69,14 +69,14 @@
                         </StackLayout>
                         <StackLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="Start">
                             <Label x:Name="labelLuogo" FontSize="Medium"  HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Italic" TextColor="Black"></Label>
-                            <Label Text="indirizzo" TextColor="LightGray" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Italic"></Label>
+                            <Label Text="indirizzo" TextColor="#275B8C" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Italic"></Label>
                         </StackLayout>
                         <StackLayout Grid.Row="1" Grid.Column="0" VerticalOptions="Center">
                             <Image Source="telefonoFisso.png" HorizontalOptions="Center" ></Image>
                         </StackLayout>
                         <StackLayout Grid.Row="1" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center">
                             <Label x:Name="numeroTelefonoFisso" Text="08231545081" HorizontalOptions="Center"  FontSize="Medium" FontAttributes="Italic" TextColor="Black"></Label>
-                            <Label Text="telefono" TextColor="LightGray" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Italic"></Label>
+                            <Label Text="telefono" TextColor="#275B8C" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Italic"></Label>
                         </StackLayout>
                         <StackLayout Grid.Row="2" Grid.Column="0" VerticalOptions="Center">
                             <Image Source="cellulare.png" HorizontalOptions="Center" VerticalOptions="Center"></Image>
@@ -87,14 +87,14 @@
                                 <StackLayout HorizontalOptions="CenterAndExpand"></StackLayout>
                                 <Label x:Name="numeroCellulareDue" Text="3474856700" HorizontalOptions="Center"  FontAttributes="Italic" FontSize="Medium" TextColor="Black"></Label>
                             </StackLayout>
-                            <Label Text="cellulare" TextColor="LightGray" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Italic"></Label>
+                            <Label Text="cellulare" TextColor="#275B8C" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Italic"></Label>
                         </StackLayout>
                         <StackLayout Grid.Row="3" Grid.Column="0">
                             <Image Source="email.png" HorizontalOptions="Center" VerticalOptions="Center"></Image>
                         </StackLayout>
                         <StackLayout Grid.Row="3" Grid.Column="1" HorizontalOptions="Start">
                             <Label x:Name="indirizzoMail" Text="cfpcm@hotmail.it" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" FontAttributes="Italic" TextColor="Black"></Label>
-                            <Label Text="e-mail" TextColor="LightGray" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Italic"></Label>
+                            <Label Text="e-mail" TextColor="#275B8C" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Italic"></Label>
                         </StackLayout>
                     </Grid>
                 </StackLayout>
@@ -104,6 +104,7 @@
                     <Button x:Name="LogOut" 
                             FontAttributes="Bold"
                             FontSize="Large"
+                            TextColor="White"
                             WidthRequest="200"
                             Clicked="LogOut_Clicked" 
                             Text="Logout"
@@ -119,7 +120,7 @@
                     <StackLayout HorizontalOptions="StartAndExpand"></StackLayout>
                     <Frame>
                         <Frame.BackgroundColor>
-                            <OnPlatform x:TypeArguments="Color" WinPhone="White" Android="#2196f3" iOS="#2196f3"/>
+                            <OnPlatform x:TypeArguments="Color" WinPhone="White" Android="#1C4164" iOS="#1C4164"/>
                         </Frame.BackgroundColor>
                         <StackLayout>
                             <StackLayout Orientation="Horizontal">

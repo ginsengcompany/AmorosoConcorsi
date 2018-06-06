@@ -52,7 +52,7 @@
                         </StackLayout>
                         
                         <Frame HasShadow="True" 
-                               BackgroundColor="#2196f3"
+                               BackgroundColor="#275B8C"
                                CornerRadius="10">
                             <Label x:Name="LabelEsatte" 
                                    Text="0" 
@@ -81,7 +81,7 @@
                         </Label>
                     </StackLayout>
                     <Frame HasShadow="True" 
-                           BackgroundColor="#2196f3" 
+                           BackgroundColor="#275B8C" 
                            CornerRadius="10">
                         <Label x:Name="LabelSbagliate" 
                                Text="0" 
@@ -109,7 +109,7 @@
                         </Label>
                     </StackLayout>
                     <Frame HasShadow="True" 
-                           BackgroundColor="#2196f3" 
+                           BackgroundColor="#275B8C" 
                            CornerRadius="10">
                         <Label x:Name="LabelNonRisposte" 
                                Text="0" 
@@ -137,7 +137,7 @@
                         </Label>
                     </StackLayout>
                     <Frame HasShadow="True" 
-                           BackgroundColor="#2196f3"
+                           BackgroundColor="#275B8C"
                            CornerRadius="10">
                         <Label x:Name="LabelTempo" 
                                Text="0" 
@@ -156,7 +156,7 @@
                     </Label>
 
                     <Frame HasShadow="True" 
-                           BackgroundColor="#2196f3"
+                           BackgroundColor="#275B8C"
                             CornerRadius="10">
                         <Label x:Name="labelPunteggio" 
                                Text="0" 
@@ -177,7 +177,7 @@
                     </Label>
                     <Frame
                         HasShadow="True" 
-                        BackgroundColor="#2196f3"
+                        BackgroundColor="#275B8C"
                         CornerRadius="10">
                         <Label 
                             x:Name="LabelPunteggioTotalizzato" 
@@ -191,12 +191,14 @@
                 <Button x:Name="btnRisultatiDettaglio"
                         Text="Guarda i risultati in dettaglio" 
                         Clicked="Button_Clicked"
+                        TextColor="White"
                         Margin="5"
                         Style="{StaticResource buttonStyle}">
                 </Button>
                 <Button x:Name="btnRitornaHome" 
                         Clicked="Button_Clicked_1" 
                         Text="Ritorna alla Home"
+                        TextColor="White"
                         Margin="5"
                         Style="{StaticResource buttonStyle}">
                     

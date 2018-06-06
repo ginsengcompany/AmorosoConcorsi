@@ -33,7 +33,7 @@
                 <StackLayout HorizontalOptions="StartAndExpand"></StackLayout>
                 <Frame>
                     <Frame.BackgroundColor>
-                        <OnPlatform x:TypeArguments="Color" WinPhone="White" Android="#2196f3" iOS="#2196f3"/>
+                        <OnPlatform x:TypeArguments="Color" WinPhone="White" Android="#1C4164" iOS="#1C4164"/>
                     </Frame.BackgroundColor>
                     <StackLayout>
                         <StackLayout Orientation="Horizontal">
