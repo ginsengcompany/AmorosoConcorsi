@@ -130,6 +130,15 @@
                                     <OnPlatform x:TypeArguments="Color" WinPhone="#f30100" Android="White" iOS="#f30100"/>
                                 </Label.TextColor>
                             </Label>
+                            <Label x:Name="lblTempo"
+                                   HorizontalOptions="EndAndExpand"
+                                   VerticalOptions="Center"
+                                   
+                                   FontAttributes="Bold">
+                                <Label.TextColor>
+                                    <OnPlatform x:TypeArguments="Color" WinPhone="#f30100" Android="White" iOS="#f30100"/>
+                                </Label.TextColor>
+                            </Label>
                         </StackLayout>
                     </Frame>
                 </StackLayout>

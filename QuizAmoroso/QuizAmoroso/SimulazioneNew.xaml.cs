@@ -98,7 +98,7 @@ namespace QuizAmoroso
             }
         }
 
-        public async void DomandaSuccessiva()
+        public async void DomandaSuccessiva(bool flag)
         {
             if (struttura.Count > 0)
             {
@@ -109,6 +109,15 @@ namespace QuizAmoroso
                 Griglia(recordCampiDomandaRisposte);
                 numeroAttualeDomanda++;
                 indiceAppoggio++;
+                if (recordCampiDomandaRisposte.urlVideo != null && flag != false)
+                {
+                    btnVideo.IsVisible = true;
+                }
+                else
+                {
+                    btnVideo.IsVisible = false;
+                }
+
                 if (numeroAttualeDomanda <= numeroTotaleDelSetDiDomande)
                 {
                     ContatoreDomande.Text = "Domanda " + numeroAttualeDomanda.ToString() + " di " + numeroTotaleDelSetDiDomande.ToString();
@@ -148,7 +157,7 @@ namespace QuizAmoroso
             struttura.RemoveAt(0);
             struttura.Add(recordCampiDomandaRisposte);
             GrigliaDomande.Children.Clear();
-            DomandaSuccessiva();
+            DomandaSuccessiva(true);
         }
 
         private async Task consegnaSimulazione_Clicked(object sender, EventArgs e)
@@ -407,7 +416,7 @@ namespace QuizAmoroso
                 datiRisultati.risposta = lista[recordCampiDomandaRisposte.Risposta];
                 struttura.RemoveAt(0);
                 GrigliaDomande.Children.Clear();
-                DomandaSuccessiva();
+                DomandaSuccessiva(true);
             }
             else
             {
@@ -431,7 +440,7 @@ namespace QuizAmoroso
                 datiRisultati.risposta = lista[recordCampiDomandaRisposte.Risposta];
                 struttura.RemoveAt(0);
                 GrigliaDomande.Children.Clear();
-                DomandaSuccessiva();
+                DomandaSuccessiva(true);
             }
         }
 
@@ -458,12 +467,20 @@ namespace QuizAmoroso
             GrigliaDomande.IsVisible = true;
             lblTempo.IsVisible = true;
             avvioQuiz.IsVisible = false;
+            if (recordCampiDomandaRisposte.urlVideo != null)
+            {
+                btnVideo.IsVisible = true;
+            }
+            else
+            {
+                btnVideo.IsVisible = false;
+            }
             FooterContatoreDomande.IsVisible = true;
             RelativeBottoneAvvio.IsVisible = false;
             TempoStartDomanda();
             TempoTrascorsoGlobale();
             click = false;
-            DomandaSuccessiva();
+            DomandaSuccessiva(true);
         }
 
         /**
@@ -504,6 +521,10 @@ namespace QuizAmoroso
             {
                 await DisplayAlert("Errore,",ex.Message,"Ok!");
             }
+        }
+        private void BtnVideo_OnClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new VideoLezioni(recordCampiDomandaRisposte.urlVideo));
         }
     }
 }

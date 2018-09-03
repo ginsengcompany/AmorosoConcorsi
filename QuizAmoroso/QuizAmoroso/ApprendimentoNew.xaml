@@ -17,7 +17,7 @@
                       HasUnevenRows="True"
                       SeparatorColor="Black"
                       IsVisible="True">
-                
+
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -42,7 +42,7 @@
                                                TextColor="{Binding lstQuesiti[0].colore}"
                                                HorizontalOptions="End"
                                                FontAttributes="{Binding lstQuesiti[0].attribute}" />
-                                     </StackLayout>
+                                    </StackLayout>
                                     <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center" IsVisible="{Binding lstQuesiti[1].visible}">
                                         <Label  Text="{Binding lstQuesiti[1].lettera}"
                                                 TextColor="Black"
@@ -145,12 +145,32 @@
                                            TextColor="Black"
                                            FontAttributes="Italic"/>
                                 </StackLayout>
-                              
+
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <StackLayout VerticalOptions="End">
+                <StackLayout HorizontalOptions="StartAndExpand"></StackLayout>
+                <Frame>
+                    <Frame.BackgroundColor>
+                        <OnPlatform x:TypeArguments="Color" WinPhone="White" Android="#2196f3" iOS="#2196f3"/>
+                    </Frame.BackgroundColor>
+                    <StackLayout Orientation="Horizontal">
+                        <Label x:Name="lblTempo"
+                                   HorizontalOptions="CenterAndExpand"
+                                   VerticalOptions="Center"
+                                   
+                                   FontAttributes="Bold">
+                            <Label.TextColor>
+                                <OnPlatform x:TypeArguments="Color" WinPhone="#f30100" Android="White" iOS="#f30100"/>
+                            </Label.TextColor>
+                        </Label>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
         </StackLayout>
+        
     </ContentPage.Content>
 </ContentPage>

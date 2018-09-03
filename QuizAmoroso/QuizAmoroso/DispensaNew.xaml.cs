@@ -54,6 +54,12 @@ namespace QuizAmoroso
         string urlRisorsa = "";
         public Timer timer = new Timer();
 
+        public TimeSpan tempo;
+        public TimeSpan tempoDomanda;
+
+        bool fermaAvviaTempoGlobale = true;
+        public string TmpTotale;
+
         /**
          * COSTRUTTORE
          * Inizializza i componenti(Label,button ecc.),
@@ -86,6 +92,18 @@ namespace QuizAmoroso
             btnIndietro.IsVisible = false;
             btnAvanti.IsVisible = true;
             timer.TempoDispensa(true);
+            TempoTrascorsoGlobale();
+        }
+        public void TempoTrascorsoGlobale()
+        {
+            Device.StartTimer(TimeSpan.FromSeconds(0), () =>
+            {
+                stopwatch.Start();
+                tempo = stopwatch.Elapsed;
+                lblTempo.Text = string.Format("{0:00}:{1:00}:{2:00}", tempo.Hours, tempo.Minutes, tempo.Seconds);
+                TmpTotale = string.Format("{0:00}:{1:00}:{2:00}", tempo.Hours, tempo.Minutes, tempo.Seconds);
+                return fermaAvviaTempoGlobale;
+            });
         }
 
         /**
@@ -214,6 +232,7 @@ namespace QuizAmoroso
          **/
         private async Task TornaAlleModalita_Clicked(object sender, EventArgs e)
         {
+            fermaAvviaTempoGlobale = false;
             await Navigation.PopAsync();
         }
 
@@ -303,6 +322,7 @@ namespace QuizAmoroso
 
         protected override async void OnDisappearing()
         {
+            fermaAvviaTempoGlobale = false;
             base.OnDisappearing();
             timer.FermaTempoDispensa();
             await InvioTempoTotale();

@@ -5,6 +5,7 @@
              xmlns:video="clr-namespace:FormsVideoLibrary"
              x:Class="QuizAmoroso.VideoLezioni"
              Title="Video Lezioni" 
+             
              Icon="quizVeloce.png">
 
 

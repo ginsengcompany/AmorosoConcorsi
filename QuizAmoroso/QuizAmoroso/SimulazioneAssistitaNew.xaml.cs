@@ -43,7 +43,8 @@ namespace QuizAmoroso
         private string tempoTrascorso;
         bool click = true;
         string resultcontent;
-        bool flag = false;
+        bool flag = false,
+             flag2 = false;
         public Timer timer = new Timer();
 
         public SimulazioneAssistitaNew ()
@@ -54,6 +55,8 @@ namespace QuizAmoroso
         protected async override void OnAppearing()
         {
             base.OnAppearing();
+            if (flag2 == false)
+            {
             Title = "Simulazione Assistita: " + SetDomande.setDomandeSelezionato.nome_set;
             LabelTitoloHeader.Text = "Simulazione Assistita: " + SetDomande.setDomandeSelezionato.nome_set;
             CaricamentoPaginaSimulazioneAssistita.IsRunning = true;
@@ -72,6 +75,9 @@ namespace QuizAmoroso
             CaricamentoPaginaSimulazioneAssistita.IsVisible = false;
             avvioQuiz.IsVisible = true;
             timer.TempoSimulazioneAssistita(true);
+                flag2 = true;
+            }
+
         }
 
         public async Task ConnessioneDomande()
@@ -95,17 +101,8 @@ namespace QuizAmoroso
                     struttura = JsonConvert.DeserializeObject<List<Domande>>(resultcontent);
                     numeroTotaleDelSetDiDomande = struttura.Count;
                     RisultatoSimulazione.conteggioDomandeSvoltePerSimulazione = numeroTotaleDelSetDiDomande;
-                    foreach(var i in struttura)
-                    { if(i.urlVideo!= null)
-                        {
-                            btnVideo.IsVisible = true;
-                        }
-                    else
-                    {
-                        btnVideo.IsVisible = false;
-                    }
-                    }
-                    DomandaSuccessiva();
+
+                    DomandaSuccessiva(false);
                 }
             }
             catch (Exception e)
@@ -116,10 +113,11 @@ namespace QuizAmoroso
             }
         }
 
-        public void DomandaSuccessiva()
+        public void DomandaSuccessiva(bool flag)
         {
             if (struttura.Count > 0)
             {
+
                 recordCampiDomandaRisposte = null;
                 index = rnd.Next(struttura.Count);
                 recordCampiDomandaRisposte = struttura[index];
@@ -130,6 +128,14 @@ namespace QuizAmoroso
                 struttura.RemoveAt(index);
                 numeroAttualeDomanda++;
                 ContatoreDomande.Text = "Domanda " + numeroAttualeDomanda.ToString() + " di " + numeroTotaleDelSetDiDomande.ToString();
+                if (recordCampiDomandaRisposte.urlVideo != null && flag != false)
+                {
+                    btnVideo.IsVisible = true;
+                }
+                else
+                {
+                    btnVideo.IsVisible = false;
+                }
             }
             else
             {
@@ -363,6 +369,14 @@ namespace QuizAmoroso
             GrigliaDomande.IsVisible = true;
             lblTempo.IsVisible = true;
             avvioQuiz.IsVisible = false;
+            if (recordCampiDomandaRisposte.urlVideo != null)
+            {
+                btnVideo.IsVisible = true;
+            }
+            else
+            {
+                btnVideo.IsVisible = false;
+            }
             RelativeBottoneAvvio.IsVisible = false;
             btnAvanti.IsVisible = false;
             FooterContatoreDomande.IsVisible = true;
@@ -374,7 +388,7 @@ namespace QuizAmoroso
         private async void btnAvanti_Clicked(object sender, EventArgs e)
         {
             GrigliaDomande.Children.Clear();
-            DomandaSuccessiva();
+            DomandaSuccessiva(true);
             await CaricamentoImmagine(recordCampiDomandaRisposte.tipo, Costanti.urlBase, recordCampiDomandaRisposte.link);
             GrigliaDomande.IsEnabled = true;
         }
@@ -405,7 +419,7 @@ namespace QuizAmoroso
 
         private void BtnVideo_OnClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new VideoLezioni("videodelcazzo"));
+             Navigation.PushAsync(new VideoLezioni(recordCampiDomandaRisposte.urlVideo));
         }
     }
 }

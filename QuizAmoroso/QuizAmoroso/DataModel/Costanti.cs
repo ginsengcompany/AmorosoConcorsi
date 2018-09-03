@@ -20,8 +20,9 @@ namespace QuizAmoroso.DataModel
         public const string urlBase = 
             "https://amorosoconcorsi.ak12srl.it/services/";
 
-        public const string domandeNew = 
-            "https://amorosoconcorsi.ak12srl.it/services/servizioapp/domandeNew";
+        public const string domandeNew =
+            //"http://192.168.125.97/servizioApp/domandeNew.php";
+          "https://amorosoconcorsi.ak12srl.it/services/servizioapp/domandeNew";
 
         public const string login = 
             "https://amorosoconcorsi.ak12srl.it/services/servizioapp/login";
@@ -29,11 +30,13 @@ namespace QuizAmoroso.DataModel
         public const string logout = 
             "https://amorosoconcorsi.ak12srl.it/services/servizioapp/logout";
 
-        public const string domconcorsorandomNew = 
+        public const string domconcorsorandomNew =
+           // "http://192.168.125.97/servizioApp/domandeconcorsorandomNew.php";
             "https://amorosoconcorsi.ak12srl.it/services/servizioapp/domconcorsorandomNew";
 
-        public const string domconcorsosequenzaNew = 
-            "https://amorosoconcorsi.ak12srl.it/services/servizioapp/domconcorsosequenzaNew";
+        public const string domconcorsosequenzaNew =
+           // "http://192.168.125.97/servizioApp/domandeconcorsosequenzaNew.php";
+           "https://amorosoconcorsi.ak12srl.it/services/servizioapp/domconcorsosequenzaNew";
 
         public const string sessione = 
             "https://amorosoconcorsi.ak12srl.it/services/servizioapp/sessione";
@@ -65,7 +68,8 @@ namespace QuizAmoroso.DataModel
         public const string materietotali = 
             "https://amorosoconcorsi.ak12srl.it/services/servizioapp/materietotali";
 
-        public const string domconcorsorandomtotaliNew = 
+        public const string domconcorsorandomtotaliNew =
+           // "http://192.168.125.97/servizioApp/domandeconcorsorandomtotaliNew.php";
             "https://amorosoconcorsi.ak12srl.it/services/servizioapp/domconcorsorandomtotaliNew";
 
         public const string invioTempiGlobali = 

@@ -75,6 +75,9 @@
     <Compile Include="HistorySessione.xaml.cs">
       <DependentUpon>HistorySessione.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ListaVideoLezioni.xaml.cs">
+      <DependentUpon>ListaVideoLezioni.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Model\ShuffleList.cs" />
     <Compile Include="Model\Timer.cs" />
     <Compile Include="NuovaModalitaQuizVeloceNew.xaml.cs">
@@ -310,6 +313,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="VideoLezioni.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ListaVideoLezioni.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

@@ -1,4 +1,5 @@
 ﻿using FormsVideoLibrary;
+using QuizAmoroso.DataModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,7 @@ namespace QuizAmoroso
         public VideoLezioni(string urlVideo)
         {
             InitializeComponent();
+            urlVideo = Costanti.urlBase + urlVideo;
             videoView.Source = VideoSource.FromUri(urlVideo);
 
         }

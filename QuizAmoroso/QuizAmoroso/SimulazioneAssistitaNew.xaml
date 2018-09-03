@@ -37,7 +37,7 @@
                                 </Label.TextColor>
                             </Label>
 
-                            <StackLayout HorizontalOptions="EndAndExpand">
+                            <StackLayout HorizontalOptions="EndAndExpand" Orientation="Horizontal">
                                 <Button
                                     x:Name="btnVideo"
                                     BackgroundColor="#0069c0"
@@ -45,10 +45,9 @@
                                     Text="Video"
                                     FontSize="Small"
                                     TextColor="White"
-                                    IsEnabled="False"
-                                    IsVisible="True"
+                                    IsVisible="False"
                                     Clicked="BtnVideo_OnClicked"
-                                    ></Button>
+                                    />
                                 <Button x:Name="btn_ApriPDF"
                                         BackgroundColor="#0069c0"
                                         HorizontalOptions="End"

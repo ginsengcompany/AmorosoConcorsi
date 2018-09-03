@@ -19,7 +19,7 @@ namespace QuizAmoroso.Droid
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
-
+            Window.SetFlags(WindowManagerFlags.Secure, WindowManagerFlags.Secure);
             base.OnCreate(bundle);
             
             XfxControls.Init();

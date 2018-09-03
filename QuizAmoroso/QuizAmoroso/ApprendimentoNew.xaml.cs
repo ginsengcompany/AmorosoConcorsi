@@ -33,6 +33,13 @@ namespace QuizAmoroso
         public Domande recordCampiDomandaRisposte = new Domande();
         public Timer timer = new Timer();
 
+        public TimeSpan tempo;
+        public TimeSpan tempoDomanda;
+        public Stopwatch stopwatch = new Stopwatch();
+
+        bool fermaAvviaTempoGlobale = true;
+        public string TmpTotale;
+
         /// <summary>
         /// Costruttore della modalità apprendimento
         /// </summary>
@@ -54,8 +61,19 @@ namespace QuizAmoroso
             // Associo alla lista le domande prelevate ed immagazzinate nella variabile Lista struttura
             lstApprendimento.ItemsSource = struttura;
             timer.TempoApprendimento(true);
+            TempoTrascorsoGlobale();
         }
-
+        public void TempoTrascorsoGlobale()
+        {
+            Device.StartTimer(TimeSpan.FromSeconds(0), () =>
+            {
+                stopwatch.Start();
+                tempo = stopwatch.Elapsed;
+                lblTempo.Text = string.Format("{0:00}:{1:00}:{2:00}", tempo.Hours, tempo.Minutes, tempo.Seconds);
+                TmpTotale = string.Format("{0:00}:{1:00}:{2:00}", tempo.Hours, tempo.Minutes, tempo.Seconds);
+                return fermaAvviaTempoGlobale;
+            });
+        }
         protected override async void OnDisappearing()
         {
             base.OnDisappearing();

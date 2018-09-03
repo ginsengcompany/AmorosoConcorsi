@@ -19,7 +19,7 @@
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
     <AndroidStoreUncompressedFileExtensions />
     <MandroidI18n />
     <JavaMaximumHeapSize />
@@ -51,11 +51,16 @@
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
     <AndroidSupportedAbis />
     <AndroidTlsProvider>btls</AndroidTlsProvider>
-    <EnableProguard>false</EnableProguard>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FormsViewGroup, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.2.5.0.91635\lib\MonoAndroid10\FormsViewGroup.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageCircle.Forms.Plugin.Abstractions, Version=1.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugins.Forms.ImageCircle.1.8.1\lib\MonoAndroid10\ImageCircle.Forms.Plugin.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageCircle.Forms.Plugin.Android, Version=1.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugins.Forms.ImageCircle.1.8.1\lib\MonoAndroid10\ImageCircle.Forms.Plugin.Android.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
@@ -176,8 +181,15 @@
     <Reference Include="Xamarin.GooglePlayServices.Tasks, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.GooglePlayServices.Tasks.42.1021.1\lib\MonoAndroid70\Xamarin.GooglePlayServices.Tasks.dll</HintPath>
     </Reference>
+    <Reference Include="Xfx.Controls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xfx.Controls.1.1.2\lib\MonoAndroid\Xfx.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Xfx.Controls.Droid, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xfx.Controls.1.1.2\lib\MonoAndroid\Xfx.Controls.Droid.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormsVideoLibrary\VideoPlayerRenderer.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="MainApplication.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -199,10 +211,14 @@
     <AndroidResource Include="Resources\values\styles.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\drawable\button_dispensa.png" />
+    <AndroidResource Include="Resources\drawable\button_apprendimento.png" />
+    <AndroidResource Include="Resources\drawable\button_simulazioneassistita.png" />
+    <AndroidResource Include="Resources\drawable\button_simulazione.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\QuizAmoroso\QuizAmoroso.csproj">
-      <Project>{296c6834-8007-4083-a4c8-6208ed24445f}</Project>
+      <Project>{C67A1C54-F6CA-4736-8381-056A681C1D1C}</Project>
       <Name>QuizAmoroso</Name>
     </ProjectReference>
   </ItemGroup>
@@ -301,6 +317,31 @@
     <AndroidResource Include="Resources\drawable-xhdpi\icona_tempo_trascorso.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icona_risposta_esatta.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icona_tempo_trascorso.png" />
+    <AndroidResource Include="Resources\drawable\icona_non_risposta.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\telefonoFisso.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\cellulare.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\email.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\luogo.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\sitoWeb.png" />
+    <AndroidResource Include="Resources\drawable\amorosoLogo.png" />
+    <AndroidResource Include="Resources\drawable\sitoWeb.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\telefonoFisso.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\cellulare.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\email.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\luogo.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\sitoWeb.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\telefonoFisso.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\cellulare.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\cronologia.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\email.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\luogo.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\sitoWeb.png" />
+    <AndroidResource Include="Resources\drawable\facebookIcon.png" />
+    <AndroidResource Include="Resources\drawable\shwpsswblueSegnato.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\shwpsswblueSegnato.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\shwpsswblueSegnato.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\shwpsswblueSegnato.png" />
+    <AndroidResource Include="Resources\drawable\frecceT.png" />
     <Content Include="res\drawable-mdpi\logo_amoroso.png" />
   </ItemGroup>
   <ItemGroup>

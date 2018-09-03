@@ -42,7 +42,17 @@
                                     </Label.TextColor>
                                 </Label>
                                 <StackLayout HorizontalOptions="CenterAndExpand"></StackLayout>
-                                <StackLayout HorizontalOptions="EndAndExpand">
+                                <StackLayout HorizontalOptions="EndAndExpand" Orientation="Horizontal">
+                                    <Button
+                                    x:Name="btnVideo"
+                                    BackgroundColor="#0069c0"
+                                    HorizontalOptions="End"
+                                    Text="Video"
+                                    FontSize="Small"
+                                    TextColor="White"
+                                    IsVisible="False"
+                                    Clicked="BtnVideo_OnClicked"
+                                    />
                                     <Button x:Name="btn_ApriPDF"
                                         HorizontalOptions="End"
                                         Text="Leggi i Brani"
