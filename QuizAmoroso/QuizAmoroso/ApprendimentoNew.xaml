@@ -11,7 +11,7 @@
     <ContentPage.Content>
         <StackLayout>
             <ActivityIndicator x:Name="caricamentoPaginaApprendimentoNew"
-                               Color="#2196f3"/>
+                               Color="#0069c0"/>
             <ListView x:Name="lstApprendimento"
                       CachingStrategy="RecycleElement"
                       HasUnevenRows="True"

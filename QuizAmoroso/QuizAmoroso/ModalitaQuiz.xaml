@@ -45,7 +45,7 @@
 
                    
                     <Frame HasShadow="False" 
-                           BackgroundColor="#2196f3"
+                           BackgroundColor="#275B8C"
                            CornerRadius="15"
                            IsVisible="False"
                            x:Name="frameLabel">

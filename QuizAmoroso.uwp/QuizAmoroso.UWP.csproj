@@ -142,6 +142,9 @@
     <Content Include="Assets\LargeTile.scale-150.png" />
     <Content Include="Assets\LargeTile.scale-200.png" />
     <Content Include="Assets\LargeTile.scale-400.png" />
+    <Content Include="Assets\logoMicrosoftStore-1080x1080.png" />
+    <Content Include="Assets\logoMicrosoftStore-300x300.png" />
+    <Content Include="Assets\logoMicrosoftStore-720x1080.png" />
     <Content Include="Assets\logoNotifica.png" />
     <Content Include="Assets\logoPacchetto.png" />
     <Content Include="Assets\luogo1x.png" />

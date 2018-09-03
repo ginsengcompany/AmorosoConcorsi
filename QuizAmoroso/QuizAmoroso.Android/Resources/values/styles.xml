@@ -18,19 +18,19 @@
     <item name="windowActionBar">false</item>
     <!-- Set theme colors from http://www.google.com/design/spec/style/color.html#color-color-palette -->
     <!-- colorPrimary is used for the default action bar background -->
-    <item name="colorPrimary">#2196f3</item>
+    <item name="colorPrimary">#1C4164</item><!-- 2196f3 -->
     <!-- colorPrimaryDark is used for the status bar -->
-    <item name="colorPrimaryDark">#2196f3</item>
+    <item name="colorPrimaryDark">#1C4164</item><!-- 2196f3 -->
     <!-- colorAccent is used as the default value for colorControlActivated which is used to tint widgets -->
-    <item name="colorAccent">#2196f3</item>
+    <item name="colorAccent">#1C4164</item><!-- 2196f3 -->
     <!-- You can also set colorControlNormal, colorControlActivated colorControlHighlight and colorSwitchThumbNormal. -->
 
-    <item name="colorControlNormal">#2196f3</item>
-    <item name="colorControlActivated">#2196f3</item>
-    <item name="colorControlHighlight">#2196f3</item>
-    <item name="android:textColorHint">	#2196f3</item>
+    <item name="colorControlNormal">#1C4164</item><!-- 2196f3 -->
+    <item name="colorControlActivated">#1C4164</item><!-- 2196f3 -->
+    <item name="colorControlHighlight">#1C4164</item><!-- 2196f3 -->
+    <item name="android:textColorHint">	#1C4164</item><!-- 2196f3 -->
     <item name="android:textColorPrimary">#000000</item>
-    <item name="colorButtonNormal">#0069c0</item>
+    <item name="colorButtonNormal">#1C4164</item><!-- 0069c0 -->
 
     <item name="windowActionModeOverlay">true</item>
     <item name="alertDialogTheme">@style/AppCompatAlertDialogStyle</item>
@@ -43,8 +43,8 @@
     <item name="colorAccent">#0069c0</item>
   </style>
   <style name="AppCompatAlertDialogStyle" parent="Theme.AppCompat.Dialog.Alert">
-    <item name="android:textColor">#2196f3</item>
-    <item name="android:textColorPrimary">#2196f3</item>
+    <item name="android:textColor">#1C4164</item><!-- 2196f3 -->
+    <item name="android:textColorPrimary">#1C4164</item><!-- 2196f3 -->
     <item name="android:background">#ffffff</item>
     <item name="colorAccent">#2196f3</item>
   </style>

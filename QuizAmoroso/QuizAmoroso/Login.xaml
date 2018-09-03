@@ -4,7 +4,7 @@
              x:Class="QuizAmoroso.Login"
              xmlns:xfx="clr-namespace:Xfx;assembly=Xfx.Controls"
              NavigationPage.HasNavigationBar="False"
-             BackgroundImage="frecceT.png" >
+             >
 
     <ContentPage.BackgroundColor>
         <OnPlatform x:TypeArguments="Color" WinPhone="White" Android="White" iOS="LightCyan"/>
@@ -42,7 +42,8 @@
                                       PlaceholderColor="LightGray"
                                       HorizontalOptions="FillAndExpand">
                             <Entry.TextColor>
-                                <OnPlatform x:TypeArguments="Color" WinPhone="#f30100" Android="#0069c0" iOS="#0069c0"/>
+                                <OnPlatform x:TypeArguments="Color" WinPhone="#f30100" Android="#1E267B" iOS="#1E267B"/>
+                                <!--vecchio colore #0069c0 -->
                             </Entry.TextColor>
                         </xfx:XfxEntry>
                     </StackLayout>
@@ -63,7 +64,8 @@
                                       IsPassword="True"
                                       HorizontalOptions="FillAndExpand">
                             <Entry.TextColor>
-                                <OnPlatform x:TypeArguments="Color" WinPhone="#f30100" Android="#0069c0" iOS="#0069c0"/>
+                                <OnPlatform x:TypeArguments="Color" WinPhone="#f30100" Android="#1E267B" iOS="#1E267B"/>
+                                <!--vecchio colore #0069c0 -->
                             </Entry.TextColor>
                         </xfx:XfxEntry>
                         
@@ -84,6 +86,7 @@
 
                 <Button x:Name="loginButton"
                         Text="Entra"
+                        TextColor="White"
                         BorderRadius="25"
                         WidthRequest="100"
                         HorizontalOptions="CenterAndExpand"
@@ -93,16 +96,16 @@
                 </Button>
 
                 <ActivityIndicator x:Name="caricamentoPagina"
-                                   Color="#2196f3"
+                                   Color="#0069c0"
                                    IsVisible="False"/>
-
+                <!--vecchio colore  2196f3 -->
                 <StackLayout VerticalOptions="End" Padding="10">
                     
                     <Frame  HasShadow="True"
                             CornerRadius="10"
                             Margin="5"
-                            BackgroundColor="#0069c0">
-                        
+                            BackgroundColor="#1C4164">
+                        <!--vecchio colore #0069c0 -->
                         <StackLayout>
                             
                             <Label Text="News:" FontSize="Medium" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Start" VerticalOptions="StartAndExpand"/>
