@@ -12,7 +12,7 @@ using Xfx;
 
 namespace QuizAmoroso.Droid
 {
-    [Activity(Label = "Amoroso Concorsi", Icon = "@drawable/icon", Theme = "@style/MainTheme", ScreenOrientation = ScreenOrientation.Portrait, ConfigurationChanges =  ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "Amoroso Concorsi", Icon = "@drawable/icon", Theme = "@style/MainTheme", ConfigurationChanges =  ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)

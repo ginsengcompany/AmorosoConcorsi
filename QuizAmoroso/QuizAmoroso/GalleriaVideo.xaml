@@ -1,14 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="QuizAmoroso.GalleriaVideo">
+             x:Class="QuizAmoroso.GalleriaVideo"
+             Title="Video Lezioni">
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="ListaVideo" HasUnevenRows="True">
+            <ListView x:Name="ListaVideo" HasUnevenRows="True" ItemTapped="ListaVideo_ItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Label Text="{Binding Nome}"/>
+                            <Frame BackgroundColor="#275B8C"  
+                                       HasShadow="True" 
+                                       CornerRadius="10" 
+                                       WidthRequest="300" 
+                                       Margin="5">
+                                <StackLayout>
+                                    <Label Text="{Binding Descrizione}"
+                                           TextColor="White"
+                                               FontAttributes="Bold"
+                                               HorizontalTextAlignment="Center"
+                                               HorizontalOptions="Center"
+                                               YAlign="Start"
+                                               XAlign="Center"/>
+                                </StackLayout>
+                            </Frame>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

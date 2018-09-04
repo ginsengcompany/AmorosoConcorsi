@@ -12,6 +12,6 @@
         <me:QuizVeloce NavigationPage.HasNavigationBar="False"></me:QuizVeloce>
         <me:Historyquiz NavigationPage.HasNavigationBar="False"></me:Historyquiz>
         <me:Statistiche NavigationPage.HasNavigationBar="False"></me:Statistiche>
-       
+        <me:ListaMaterieVideoLezioni NavigationPage.HasNavigationBar="False"></me:ListaMaterieVideoLezioni>
     </TabbedPage.Children>
 </TabbedPage>
