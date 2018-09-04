@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="QuizAmoroso.GalleriaVideo">
+             x:Class="QuizAmoroso.ListaMaterieVideoLezioni">
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="ListaVideo" HasUnevenRows="True">
+            <ListView x:Name="listaMaterie" ItemTapped="listaMaterie_ItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Label Text="{Binding Nome}"/>
+                            <Label Text="{Binding Materia}"/>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

@@ -50,6 +50,7 @@
     <Compile Include="DataModel\RisultatoDomande.cs" />
     <Compile Include="DataModel\Sessioni.cs" />
     <Compile Include="DataModel\VideoInfo.cs" />
+    <Compile Include="DataModel\VideoLezioni.cs" />
     <Compile Include="DettagliTest.xaml.cs">
       <DependentUpon>DettagliTest.xaml</DependentUpon>
     </Compile>
@@ -78,8 +79,8 @@
     <Compile Include="HistorySessione.xaml.cs">
       <DependentUpon>HistorySessione.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ListaVideoLezioni.xaml.cs">
-      <DependentUpon>ListaVideoLezioni.xaml</DependentUpon>
+    <Compile Include="ListaMaterieVideoLezioni.xaml.cs">
+      <DependentUpon>ListaMaterieVideoLezioni.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\ShuffleList.cs" />
     <Compile Include="Model\Timer.cs" />
@@ -321,7 +322,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ListaVideoLezioni.xaml">
+    <EmbeddedResource Include="ListaMaterieVideoLezioni.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

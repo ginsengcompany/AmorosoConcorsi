@@ -19,7 +19,7 @@ namespace QuizAmoroso
         {
             InitializeComponent();
             // Indica la prima pagina che verrà visualizzata 
-            MainPage = new Login();
+            MainPage =new NavigationPage( new ListaMaterieVideoLezioni());
         }
 
         protected override void OnStart()
