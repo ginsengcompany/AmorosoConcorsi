@@ -75,6 +75,11 @@ namespace QuizAmoroso.DataModel
         public const string invioTempiGlobali = 
             "https://amorosoconcorsi.ak12srl.it/services/servizioapp/invioTempi";
 
+        public const string listaMaterieVideo =
+            "https://amorosoconcorsi.ak12srl.it/services/servizioapp/listaMaterieVideo";
+        public const string ListaLezioniVideo =
+            "https://amorosoconcorsi.ak12srl.it/services/servizioapp/listaLezioniVideo";
+
         /**
          * Costanti di servizio
          * */
