@@ -29,7 +29,7 @@ namespace QuizAmoroso
             InitializeComponent();
             labelLuogo.FormattedText = "Viale Italia n° 53"+"\n"+"San Nicola La Strada (CE)";
             labelBenvenuto.FormattedText = "BENVENUTO " + Utente.Instance.getNomeDiBattesimo;
-           LabelInformazioneLog.Text=  Utente.Instance.getNomeDiBattesimo+ " sei connesso con il dispositivo " + CrossDeviceInfo.Current.Model;
+           LabelInformazioneLog.Text=   " sei connesso con il dispositivo " + CrossDeviceInfo.Current.Model;
             
             var tapGestureLuogo = new TapGestureRecognizer();
             tapGestureLuogo.Tapped += (s, e) =>

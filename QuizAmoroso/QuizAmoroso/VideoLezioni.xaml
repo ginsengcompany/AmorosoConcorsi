@@ -8,9 +8,9 @@
              Icon="quizVeloce.png"
              BackgroundColor="Black" >
 
-
-
+    
     <video:VideoPlayer VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" x:Name="videoView"/>
+
     <!--<StackLayout Grid.Row="1">
             <Label VerticalOptions="End" Text="prima lezione del piano come mangiare un coniglio" />
             <Label Text="Esercitazioni su la lezione"/>

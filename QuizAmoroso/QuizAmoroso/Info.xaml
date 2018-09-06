@@ -12,13 +12,13 @@
         <OnPlatform x:TypeArguments="Thickness"
                     iOS="0,20,0,0"/>
     </ContentPage.Padding>
-    
+
     <ContentPage.Content>
         <ScrollView>
             <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                 <StackLayout BackgroundColor="#1C4164">
                     <StackLayout  HorizontalOptions="StartAndExpand" >
-                        
+
                         <StackLayout Orientation="Horizontal">
                             <abstractions:CircleImage Source="amorosoLogo.png"
                                                       HeightRequest="110"   
@@ -28,9 +28,22 @@
                                                       HorizontalOptions="Start"
                                                       Margin="4">
                             </abstractions:CircleImage>
-                            <Label x:Name="labelBenvenuto" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" FontSize="Large" FontAttributes="Italic"></Label>
+                            <StackLayout Padding="10">
+                                <Label x:Name="labelBenvenuto" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" FontSize="Large" FontAttributes="Italic"></Label>
+                                <Label x:Name="LabelInformazioneLog" TextColor="White"  HorizontalOptions="Center" VerticalOptions="Center" FontSize="Small" FontAttributes="Italic"></Label>
+                                <Button x:Name="LogOut" 
+                                        FontAttributes="Bold"
+                                        FontSize="Large"
+                                        TextColor="White"
+                                        WidthRequest="200"
+                                        Clicked="LogOut_Clicked" 
+                                        Text="Logout"
+                                        HorizontalOptions="Center"
+                                        VerticalOptions="Center"
+                                        Style="{StaticResource buttonStyle}"/>
+                            </StackLayout>
                         </StackLayout>
-                        
+
                         <StackLayout Orientation="Horizontal" BackgroundColor="Transparent">
                             <Label Text=" Amoroso Concorsi" FontSize="30" TextColor="White" FontAttributes="Italic" VerticalOptions="Center" HorizontalOptions="Center"></Label>
                             <StackLayout HorizontalOptions="CenterAndExpand"></StackLayout>
@@ -47,7 +60,7 @@
                                                       WidthRequest="40">
                             </abstractions:CircleImage>
                         </StackLayout>
-                        
+
                     </StackLayout>
                 </StackLayout>
 
@@ -98,8 +111,8 @@
                         </StackLayout>
                     </Grid>
                 </StackLayout>
-                
-                <StackLayout HorizontalOptions="Center" VerticalOptions="End">
+
+               <!-- <StackLayout HorizontalOptions="Center" VerticalOptions="End">
                     <Label x:Name="LabelInformazioneLog" TextColor="Black"  HorizontalOptions="Center" VerticalOptions="Center" FontSize="Small" FontAttributes="Italic"></Label>
                     <Button x:Name="LogOut" 
                             FontAttributes="Bold"
@@ -111,8 +124,8 @@
                             HorizontalOptions="Center"
                             VerticalOptions="Center"
                             Style="{StaticResource buttonStyle}"/>
-                </StackLayout>
-                
+                </StackLayout>-->
+
                 <StackLayout VerticalOptions="End">
                     <StackLayout.IsVisible>
                         <OnPlatform x:TypeArguments="x:Boolean" WinPhone="true" Android="true" iOS="false"/>
@@ -135,7 +148,7 @@
                         </StackLayout>
                     </Frame>
                 </StackLayout>
-                
+
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

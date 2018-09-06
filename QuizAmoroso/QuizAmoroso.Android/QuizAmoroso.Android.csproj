@@ -90,6 +90,18 @@
     <Reference Include="Plugin.PdfRasterizer.Abstractions, Version=0.4.0.0, Culture=en, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xam.Plugin.PdfRasterizer.0.4.0.0\lib\MonoAndroid10\Plugin.PdfRasterizer.Abstractions.dll</HintPath>
     </Reference>
+    <Reference Include="Syncfusion.Core.XForms, Version=16.2451.0.50, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.Core.16.2.0.50\lib\MonoAndroid10\Syncfusion.Core.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing, Version=16.2.0.50, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Licensing.16.2.0.50\lib\MonoAndroid10\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfChart.XForms, Version=16.2451.0.50, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.SfChart.16.2.0.50\lib\MonoAndroid10\Syncfusion.SfChart.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfChart.XForms.Android, Version=16.2451.0.50, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.SfChart.16.2.0.50\lib\MonoAndroid10\Syncfusion.SfChart.XForms.Android.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net.Http" />
@@ -341,6 +353,7 @@
     <AndroidResource Include="Resources\drawable-xhdpi\shwpsswblueSegnato.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\shwpsswblueSegnato.png" />
     <AndroidResource Include="Resources\drawable\frecceT.png" />
+    <AndroidResource Include="Resources\drawable\baseline_videocam_white_48dp.png" />
     <Content Include="res\drawable-mdpi\logo_amoroso.png" />
   </ItemGroup>
   <ItemGroup>
