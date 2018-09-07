@@ -181,12 +181,12 @@ namespace QuizAmoroso
                 }else 
                 {
                     flagConnessioneAccettata = false;
-                    
-                    jsonAccount = JsonConvert.DeserializeObject<JsonAccount>(rispostaRichiestaLoginIniziale);
+                    JsonAccount json;
+                    json = JsonConvert.DeserializeObject<JsonAccount>(rispostaRichiestaLoginIniziale);
                    
-                    Utente.Instance.getPassword = jsonAccount.password;
-                    Utente.Instance.getUserName = jsonAccount.username;
-                    Utente.Instance.getNomeDiBattesimo = jsonAccount.nome;
+                    Utente.Instance.getPassword = json.password;
+                    Utente.Instance.getUserName = json.username;
+                    Utente.Instance.getNomeDiBattesimo = json.nome;
                     Utente.Instance.getDevInfo = generatedAppId;
                 }
             }

@@ -288,7 +288,7 @@
       <Version>6.0.1</Version>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
-      <Version>10.0.3</Version>
+      <Version>11.0.2</Version>
     </PackageReference>
     <PackageReference Include="OxyPlot.Windows">
       <Version>2.0.0-unstable1013</Version>

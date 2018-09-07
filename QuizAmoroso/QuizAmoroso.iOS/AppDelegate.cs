@@ -40,11 +40,11 @@ namespace QuizAmoroso.iOS
         }
 
         // Remove window hiding app content when app is resumed
-        public override void OnActivated(UIApplication application)
+    /*  public override void OnActivated(UIApplication application)
         {
             var view = Window.ViewWithTag(new nint(101));
             view?.RemoveFromSuperview();
-        }
+        }*/
 
 
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
